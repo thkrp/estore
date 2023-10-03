@@ -1,0 +1,5 @@
+.storybook-cards {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}

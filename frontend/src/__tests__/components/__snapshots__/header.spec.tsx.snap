@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header should not be empty 1`] = `
+<div>
+  <header>
+    <div
+      class="sc-bcPKhP bzTsiy"
+    >
+      <div
+        class="sc-grXZZQ kUUMuW"
+      >
+        <nav
+          class="sc-dkjKgF eZRrsL"
+        >
+          <div
+            class="sc-hLclGa daPBmg"
+          >
+            <a
+              class="sc-eDnVMP kgNNit"
+              href="/o-magazine"
+            >
+              О магазине
+            </a>
+          </div>
+          <div
+            class="sc-hLclGa daPBmg"
+          >
+            <a
+              class="sc-eDnVMP kgNNit"
+              href="/garantii-i-vozvrat"
+            >
+              Гарантии и возврат
+            </a>
+          </div>
+          <div
+            class="sc-hLclGa daPBmg"
+          >
+            <a
+              class="sc-eDnVMP kgNNit"
+              href="/oplata-i-dostavka"
+            >
+              Оплата и доставка
+            </a>
+          </div>
+          <div
+            class="sc-hLclGa daPBmg"
+          >
+            <a
+              class="sc-eDnVMP kgNNit"
+              href="/kontakty"
+            >
+              Контакты
+            </a>
+          </div>
+        </nav>
+        <div
+          class="sc-jSwlEQ cYCoeh"
+        >
+          <div
+            class="sc-gKHVLF fZEJrJ active"
+          >
+            ua
+          </div>
+          <div
+            class="sc-gKHVLF bBQtV"
+          >
+            ru
+          </div>
+          <div
+            class="sc-gKHVLF bBQtV"
+          >
+            en
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-bcPKhP bzTsiy"
+    >
+      <div
+        class="sc-iBAaJG cLdejG"
+      >
+        <div
+          class="sc-ftLKQv iJaNTQ"
+        >
+          <a
+            class="sc-pqitP ffAQWY"
+            href="/"
+          >
+            <img
+              alt="logo"
+              src="/upload/iblock/1a8/1a8a5771cc80a6d2ef5a93e271ebfd1f.png"
+            />
+          </a>
+        </div>
+        <div
+          class="sc-ipMvLY koEkhQ"
+        >
+          <div
+            class="sc-csmVar gJSHYu"
+          >
+            <a
+              class="sc-jrkPcm cOiiHq sc-eLSjS cHrhCN"
+              href="tel:+380500000000"
+            >
+              <div
+                class="sc-kDnyCx kJCDtj"
+              >
+                <svg>
+                  old-phone.svg
+                </svg>
+              </div>
+              +38 050 000 00 00
+            </a>
+            <a
+              class="sc-jrkPcm cOiiHq sc-eLSjS cHrhCN"
+              href="tel:+380500000001"
+            >
+              <div
+                class="sc-kDnyCx kJCDtj"
+              >
+                <svg>
+                  old-phone.svg
+                </svg>
+              </div>
+              +38 050 000 00 01
+            </a>
+          </div>
+          <form
+            class="sc-ksJisA cLQgpZ"
+          >
+            <input
+              autocapitalize="off"
+              autocomplete="off"
+              autocorrect="off"
+              class="sc-hBpgZr fdHwBX"
+              name="search"
+              placeholder="Поиск"
+              spellcheck="false"
+              type="text"
+              value=""
+            />
+            <button
+              class="sc-fnOeiS fHEukP"
+              type="submit"
+            >
+              <svg>
+                search.svg
+              </svg>
+            </button>
+          </form>
+          <div
+            class="sc-csmVar gJSHYu"
+          >
+            <a
+              class="sc-jrkPcm cOiiHq sc-bqOBKd hUaGCL"
+              href="mailto:test@test.com"
+            >
+              <div
+                class="sc-kDnyCx kJCDtj"
+              >
+                <svg>
+                  mail.svg
+                </svg>
+              </div>
+              test@test.com
+            </a>
+          </div>
+        </div>
+        <div
+          class="sc-fEyylQ gSdmkH"
+        >
+          <a
+            class="sc-bjEwCx gDrkdm"
+            href="/"
+          >
+            <span
+              class="sc-dmBjiZ dXoFtl"
+            >
+              2
+            </span>
+          </a>
+          <div
+            class="sc-idyqAC bExejx"
+          >
+            <a
+              class="sc-dIEoRj fpXWfT"
+              href="/"
+            >
+              Корзина
+              :
+            </a>
+            <span
+              class="sc-hHvkSs bcKmWk"
+            >
+              14289
+               
+              <span>
+                грн.
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+`;

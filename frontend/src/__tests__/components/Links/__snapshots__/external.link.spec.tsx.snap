@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExternalLink sanitizeUrl has been called 1`] = `
+<div>
+  <a
+    href="google.com"
+    rel="noreferrer noopener"
+    target="_blank"
+  >
+    google
+  </a>
+</div>
+`;

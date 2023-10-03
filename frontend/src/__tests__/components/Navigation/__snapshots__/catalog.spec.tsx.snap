@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CatalogNav should be defined 1`] = `
+<div>
+  <div
+    class="sc-bYUneI iDoLgO"
+  >
+    <div
+      class="sc-kMbQoj nRKsp"
+    >
+      <span
+        class="sc-ilpitK iZdflc"
+      >
+        <svg>
+          list.svg
+        </svg>
+      </span>
+      <a
+        class="sc-jIJgYh bIOgZE"
+        href="/catalog"
+      >
+        КАТАЛОГ ТОВАРОВ
+      </a>
+    </div>
+    <div
+      class="sc-hhWzdI gBVoWr"
+    >
+      <a
+        class="sc-gXCJSa bETFlG"
+        href="/catalog/tractors"
+        title="Тракторы"
+      >
+        Тракторы
+      </a>
+      <a
+        class="sc-gXCJSa bETFlG"
+        href="/catalog/motobloki"
+        title="Мотоблоки"
+      >
+        Мотоблоки
+      </a>
+      <a
+        class="sc-gXCJSa bETFlG"
+        href="/catalog/traktornoe-navesnoe-oborudovanie"
+        title="Тракторное навесное оборудование"
+      >
+        Тракторное навесное оборудование
+      </a>
+      <a
+        class="sc-gXCJSa bETFlG"
+        href="/catalog/motoblochnoe-navesnoe-oborudovanie"
+        title="Мотоблочное навесное оборудование"
+      >
+        Мотоблочное навесное оборудование
+      </a>
+      <a
+        class="sc-gXCJSa bETFlG"
+        href="/catalog/sredstva-zashchity-rasteniy"
+        title="Средства защиты растений"
+      >
+        Средства защиты растений
+      </a>
+      <a
+        class="sc-gXCJSa bETFlG"
+        href="/catalog/tekhnika-dlya-sada-i-ogoroda"
+        title="Техника для сада и огорода"
+      >
+        Техника для сада и огорода
+      </a>
+    </div>
+  </div>
+</div>
+`;

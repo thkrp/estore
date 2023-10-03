@@ -1,0 +1,26 @@
+{
+    "name": "app-shared",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Farm equipment shared library",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "typings": "dist/index.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc",
+        "watch": "tsc -w",
+        "nodemon-watch": "nodemon --config ./nodemon.json -w . -i dist -e js,json,ts,env -x tsc"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.4.0",
+        "nodemon": "^3.0.1",
+        "ts-node": "^10.9.1",
+        "tslib": "^2.6.2"
+    },
+    "devDependencies": {
+        "typescript": "^5.1.6"
+    }
+}

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`logo should be able to pass a logo 1`] = `
+<div>
+  <div
+    class="sc-bcPKhP gUdugw"
+  >
+    <a
+      class="sc-grXZZQ hNPkJg"
+      href="/"
+    >
+      <img
+        alt="logo"
+        src="/upload/iblock/1a8/1a8a5771cc80a6d2ef5a93e271ebfd1f.png"
+      />
+    </a>
+  </div>
+</div>
+`;

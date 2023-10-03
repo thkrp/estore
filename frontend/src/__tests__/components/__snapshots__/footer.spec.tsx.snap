@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`footer should not be empty 1`] = `
+<div>
+  <footer
+    class="sc-kgvdhe BhphK"
+  >
+    <div
+      class="sc-bcPKhP bzTsiy"
+    >
+      <div
+        class="sc-fLBbxL hipVET"
+      >
+        <div
+          class="sc-bBbNsw hvVpaU"
+        >
+          <div
+            class="sc-ftLKQv iJaNTQ"
+          >
+            <a
+              class="sc-pqitP ffAQWY"
+              href="/"
+            >
+              <img
+                alt="logo"
+                src="/upload/iblock/1a8/1a8a5771cc80a6d2ef5a93e271ebfd1f.png"
+              />
+            </a>
+          </div>
+          <div
+            class="sc-ivDvhZ bykssJ"
+          />
+        </div>
+        <div
+          class="sc-cwKisF bfhgHd"
+        >
+          <div
+            class="sc-lltjXc cHzuwZ"
+          >
+            <h3
+              class="sc-iJfdHH oifRB"
+            >
+              Каталог товаров
+            </h3>
+            <div
+              class="sc-gisvNi gZocvu"
+            >
+              <div
+                class="sc-ezGUZh crobLX"
+              >
+                <a
+                  href="/catalog/motobloki"
+                >
+                  Мотоблоки
+                </a>
+              </div>
+              <div
+                class="sc-ezGUZh crobLX"
+              >
+                <a
+                  href="/catalog/motoblochnoe-navesnoe-oborudovanie"
+                >
+                  Мотоблочное навесное оборудование
+                </a>
+              </div>
+              <div
+                class="sc-ezGUZh crobLX"
+              >
+                <a
+                  href="/catalog/motobloki/motobloki-i-motokultivatory-kentavr-besplatnaya-dostavka/motobloki-s-vozdushnym-okhlazhdeniem-kentavr"
+                >
+                  Мотоблоки "КЕНТАВР"
+                </a>
+              </div>
+              <div
+                class="sc-ezGUZh crobLX"
+              >
+                <a
+                  href="/catalog/tekhnika-dlya-sada-i-ogoroda/benzopila"
+                >
+                  Бензопила
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-lltjXc cHzuwZ"
+          >
+            <h3
+              class="sc-iJfdHH oifRB"
+            >
+              О магазине
+            </h3>
+            <div
+              class="sc-gisvNi gZocvu"
+            >
+              <div
+                class="sc-ezGUZh crobLX"
+              >
+                <a
+                  href="/o-magazine"
+                >
+                  О магазине
+                </a>
+              </div>
+              <div
+                class="sc-ezGUZh crobLX"
+              >
+                <a
+                  href="/garantii-i-vozvrat"
+                >
+                  Гарантии и возврат
+                </a>
+              </div>
+              <div
+                class="sc-ezGUZh crobLX"
+              >
+                <a
+                  href="/oplata-i-dostavka"
+                >
+                  Оплата и доставка
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-lltjXc cHzuwZ"
+          >
+            <h3
+              class="sc-iJfdHH oifRB"
+            >
+              КОНТАКТЫ
+            </h3>
+            <div
+              class="sc-gisvNi gZocvu"
+            >
+              <div
+                class="sc-ezGUZh crobLX"
+              >
+                <a
+                  class="sc-jrkPcm cOiiHq"
+                  href="mailto:support@test.com"
+                >
+                  support@test.com
+                </a>
+              </div>
+              <div
+                class="sc-ezGUZh crobLX"
+              >
+                <a
+                  class="sc-jrkPcm cOiiHq"
+                  href="tel:+380660000005"
+                >
+                  +38 066 000 00 05
+                </a>
+              </div>
+              <div
+                class="sc-ezGUZh crobLX"
+              >
+                <a
+                  class="sc-jrkPcm cOiiHq"
+                  href="tel:+380660000004"
+                >
+                  +38 066 000 00 04
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+`;

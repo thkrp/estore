@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CatalogNav should be defined 1`] = `
+<div>
+  <div
+    class="sc-clcPSL ejIKSr"
+  >
+    <div
+      class="sc-fbzYXw cRYaIo"
+    >
+      <a
+        class="sc-GFXod dLNAup"
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        class="sc-GFXod dLNAup"
+        href="/catalog"
+      >
+        Catalog
+      </a>
+      <a
+        class="sc-GFXod dLNAup"
+        href="/cart"
+      >
+        Cart
+      </a>
+      <button
+        class="sc-fXitXF hjVjVE"
+        type="button"
+      >
+        More
+      </button>
+    </div>
+  </div>
+</div>
+`;

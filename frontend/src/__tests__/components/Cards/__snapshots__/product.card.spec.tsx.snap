@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product card component should return a card 1`] = `
+<div>
+  <a
+    class="sc-bcPKhP kwXmRT"
+    href="/catalog/motoblochnoe-navesnoe-oborudovanie/adaptery-dlya-motoblokov/adapter-k-motobloku-ara"
+    role="link"
+  >
+    <span
+      class="sc-grXZZQ hQYoSY"
+    />
+    <h3
+      class="sc-dkjKgF gnGgQT"
+      title="Адаптер к мотоблоку \\"АРА\\""
+    >
+      Адаптер к мотоблоку "АРА"
+    </h3>
+  </a>
+</div>
+`;

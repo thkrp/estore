@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link sanitizeUrl has been called 1`] = `
+<div>
+  <a
+    href="/"
+  />
+</div>
+`;

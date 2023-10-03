@@ -1,0 +1,11 @@
+<?php
+const PRODUCTS_IBLOCK = 5;
+const BEST_SALES_COUNT = 7;
+const BRENDS_IBLCOK_ID = 2;
+const SITE_INFO_IBLOCK = 10;
+const SITE_TOP_MENU_IBLOCK = 11;
+const SITE_BOTTOM_MENU_IBLOCK = 12;
+const CACHE_TTL = 86400;
+const CACHE_PATH = "/cache_api/";
+
+const DEFAULT_LOCALE = 'RU';

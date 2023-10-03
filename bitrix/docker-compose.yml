@@ -1,0 +1,55 @@
+version: '3.7'
+
+services:
+    bitrix-server-nginx:
+        container_name: bitrix-server-nginx
+        image: nginx
+        volumes:
+            - ./docker/nginx/apache.conf.template:/etc/nginx/conf.d/apache.conf.template
+        ports:
+            - ${BX_SERVER_PORT:?err}:${BX_SERVER_PORT:?err}
+        environment:
+            - DOLLAR=$$
+            - PORT=${BX_SERVER_PORT:?err}
+            - APACHE_HOST=${BX_APACHE_SERVER_HOST:?err}
+            - APACHE_PORT=${BX_APACHE_SERVER_PORT:?err}
+        command: /bin/bash -c "envsubst < /etc/nginx/conf.d/apache.conf.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+        networks:
+            - app-frontend-backend-net
+        depends_on:
+            - bitrix-server-php-apache
+    bitrix-server-php-apache:
+        container_name: bitrix-server-php-apache
+        build: .
+        environment:
+            - APACHE_RUN_USER=www-data
+        volumes:
+            - ./docker/apache/php.ini:/usr/local/etc/php/php.ini
+            - ./:/var/www/html
+            - /var/www/html/bitrix
+            - ./bitrix/cache:/var/www/html/bitrix/cache
+            - ./bitrix/backup:/var/www/html/bitrix/backup
+            - /var/www/html/vendor
+        ports:
+            - ${BX_APACHE_SERVER_PORT:?err}:${BX_APACHE_SERVER_PORT:?err}
+        networks:
+            - app-frontend-backend-net
+        depends_on:
+            - bitrix-server-database
+
+    bitrix-server-database:
+        container_name: bitrix-server-database
+        image: 'mysql:5.6'
+        volumes:
+            - ./docker/db:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
+            MYSQL_USER: ${MYSQL_USER}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+        networks:
+            - app-frontend-backend-net
+
+networks:
+    app-frontend-backend-net:
+        driver: bridge

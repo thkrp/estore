@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Brand card component should return a card 1`] = `
+<div>
+  <a
+    class="sc-bcPKhP iTEbzn"
+    href="about:blank"
+    role="link"
+  >
+    <span
+      class="sc-grXZZQ bgGREK"
+    />
+  </a>
+</div>
+`;

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactLink should be able to hide an icon 1`] = `
+<div>
+  <a
+    class="sc-bcPKhP bBmFaB email-link"
+    href="mailto:test@test.com"
+  >
+    test@test.com
+  </a>
+</div>
+`;
+
+exports[`ContactLink should contain an icon 1`] = `
+<div>
+  <a
+    class="sc-bcPKhP bBmFaB email-link"
+    href="mailto:test@test.com"
+  >
+    <div
+      class="sc-grXZZQ gdnAgs"
+    >
+      <svg>
+        mail.svg
+      </svg>
+    </div>
+    test@test.com
+  </a>
+</div>
+`;

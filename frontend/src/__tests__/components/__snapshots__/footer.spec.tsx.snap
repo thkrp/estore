@@ -3,22 +3,22 @@
 exports[`footer should not be empty 1`] = `
 <div>
   <footer
-    class="sc-kgvdhe BhphK"
+    class="sc-bBkKde dUSTSC"
   >
     <div
-      class="sc-bcPKhP bzTsiy"
+      class="sc-beySPh dhajrx"
     >
       <div
-        class="sc-fLBbxL hipVET"
+        class="sc-iuOOrT bujGuO"
       >
         <div
-          class="sc-bBbNsw hvVpaU"
+          class="sc-cyZbeP cCqVKS"
         >
           <div
-            class="sc-ftLKQv iJaNTQ"
+            class="sc-jsEeTM cVZclg"
           >
             <a
-              class="sc-pqitP ffAQWY"
+              class="sc-kFCroH XbetV"
               href="/"
             >
               <img
@@ -28,25 +28,25 @@ exports[`footer should not be empty 1`] = `
             </a>
           </div>
           <div
-            class="sc-ivDvhZ bykssJ"
+            class="sc-lnsjTu SxwZK"
           />
         </div>
         <div
-          class="sc-cwKisF bfhgHd"
+          class="sc-iKOmoZ fGwYyV"
         >
           <div
-            class="sc-lltjXc cHzuwZ"
+            class="sc-gjLLEI hhqhZb"
           >
             <h3
-              class="sc-iJfdHH oifRB"
+              class="sc-eAKtBH hLtthD"
             >
               Каталог товаров
             </h3>
             <div
-              class="sc-gisvNi gZocvu"
+              class="sc-bZHSRq hmtuSQ"
             >
               <div
-                class="sc-ezGUZh crobLX"
+                class="sc-kMzELR eXqzuZ"
               >
                 <a
                   href="/catalog/motobloki"
@@ -55,7 +55,7 @@ exports[`footer should not be empty 1`] = `
                 </a>
               </div>
               <div
-                class="sc-ezGUZh crobLX"
+                class="sc-kMzELR eXqzuZ"
               >
                 <a
                   href="/catalog/motoblochnoe-navesnoe-oborudovanie"
@@ -64,7 +64,7 @@ exports[`footer should not be empty 1`] = `
                 </a>
               </div>
               <div
-                class="sc-ezGUZh crobLX"
+                class="sc-kMzELR eXqzuZ"
               >
                 <a
                   href="/catalog/motobloki/motobloki-i-motokultivatory-kentavr-besplatnaya-dostavka/motobloki-s-vozdushnym-okhlazhdeniem-kentavr"
@@ -73,7 +73,7 @@ exports[`footer should not be empty 1`] = `
                 </a>
               </div>
               <div
-                class="sc-ezGUZh crobLX"
+                class="sc-kMzELR eXqzuZ"
               >
                 <a
                   href="/catalog/tekhnika-dlya-sada-i-ogoroda/benzopila"
@@ -84,18 +84,18 @@ exports[`footer should not be empty 1`] = `
             </div>
           </div>
           <div
-            class="sc-lltjXc cHzuwZ"
+            class="sc-gjLLEI hhqhZb"
           >
             <h3
-              class="sc-iJfdHH oifRB"
+              class="sc-eAKtBH hLtthD"
             >
               О магазине
             </h3>
             <div
-              class="sc-gisvNi gZocvu"
+              class="sc-bZHSRq hmtuSQ"
             >
               <div
-                class="sc-ezGUZh crobLX"
+                class="sc-kMzELR eXqzuZ"
               >
                 <a
                   href="/o-magazine"
@@ -104,7 +104,7 @@ exports[`footer should not be empty 1`] = `
                 </a>
               </div>
               <div
-                class="sc-ezGUZh crobLX"
+                class="sc-kMzELR eXqzuZ"
               >
                 <a
                   href="/garantii-i-vozvrat"
@@ -113,7 +113,7 @@ exports[`footer should not be empty 1`] = `
                 </a>
               </div>
               <div
-                class="sc-ezGUZh crobLX"
+                class="sc-kMzELR eXqzuZ"
               >
                 <a
                   href="/oplata-i-dostavka"
@@ -124,41 +124,41 @@ exports[`footer should not be empty 1`] = `
             </div>
           </div>
           <div
-            class="sc-lltjXc cHzuwZ"
+            class="sc-gjLLEI hhqhZb"
           >
             <h3
-              class="sc-iJfdHH oifRB"
+              class="sc-eAKtBH hLtthD"
             >
               КОНТАКТЫ
             </h3>
             <div
-              class="sc-gisvNi gZocvu"
+              class="sc-bZHSRq hmtuSQ"
             >
               <div
-                class="sc-ezGUZh crobLX"
+                class="sc-kMzELR eXqzuZ"
               >
                 <a
-                  class="sc-jrkPcm cOiiHq"
+                  class="sc-irLvIq gUvpOU"
                   href="mailto:support@test.com"
                 >
                   support@test.com
                 </a>
               </div>
               <div
-                class="sc-ezGUZh crobLX"
+                class="sc-kMzELR eXqzuZ"
               >
                 <a
-                  class="sc-jrkPcm cOiiHq"
+                  class="sc-irLvIq gUvpOU"
                   href="tel:+380660000005"
                 >
                   +38 066 000 00 05
                 </a>
               </div>
               <div
-                class="sc-ezGUZh crobLX"
+                class="sc-kMzELR eXqzuZ"
               >
                 <a
-                  class="sc-jrkPcm cOiiHq"
+                  class="sc-irLvIq gUvpOU"
                   href="tel:+380660000004"
                 >
                   +38 066 000 00 04

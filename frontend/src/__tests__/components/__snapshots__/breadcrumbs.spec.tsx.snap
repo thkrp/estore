@@ -3,144 +3,144 @@
 exports[`breadcrumbs clicking on the button should open a menu of subcategories 1`] = `
 <div
   aria-label="sub-categories"
-  class="sc-eDnVMP cEnzy"
+  class="sc-eDLKkx iDizGZ"
   role="menu"
 >
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/adaptery-dlya-motoblokov"
     role="menuitem"
   >
     Адаптеры для мотоблоков
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/borony-motoblochnye"
     role="menuitem"
   >
     Бороны
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/grabli-motoblochnye"
     role="menuitem"
   >
     Грабли мотоблочные
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/granulyatory-kormoizmelchiteli-zernodrobilki"
     role="menuitem"
   >
     Грануляторы, кормоизмельчители, зернодробилки
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/gruntozatsepy"
     role="menuitem"
   >
     Грунтозацепы
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/izmelchiteli-vetok-i-drovokoly"
     role="menuitem"
   >
     Измельчители веток и дровоколы
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/kartofelesazhalki"
     role="menuitem"
   >
     Картофелесажалки
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/kopalki-dlya-kartofelya-i-chesnoka-motoblochnye"
     role="menuitem"
   >
     Копалки для картофеля и чеснока мотоблочные
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/kosilki-k-motoblokam"
     role="menuitem"
   >
     Косилки к мотоблокам
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/mulchirovateli-dlya-motoblokov"
     role="menuitem"
   >
     Мульчирователи для мотоблоков
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/nabory-dlya-pereoborudovaniya"
     role="menuitem"
   >
     Наборы для переоборудования
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/okuchniki-pidgortachi-i-kultivatory"
     role="menuitem"
   >
     Окучники (пiдгортачi) и культиваторы
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/opryskivateli-motoblochnye"
     role="menuitem"
   >
     Опрыскиватели мотоблочные
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/ploskorezy-propolniki"
     role="menuitem"
   >
     Плоскорезы (пропольники)
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/plugi-motoblochnye"
     role="menuitem"
   >
     Плуги
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/pritsepy-dlya-motoblokov-i-mototraktorov"
     role="menuitem"
   >
     Прицепы для мотоблоков и мототракторов
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/razbrasyvateli-udobreniy-motoblochnye"
     role="menuitem"
   >
     Разбрасыватели удобрений мотоблочные
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/seyalki-motoblochnye"
     role="menuitem"
   >
     Сеялки мотоблочные
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/frezy-nozhi-dlya-pochvofrezy"
     role="menuitem"
   >
     Фрезы, ножи для почвофрезы
   </a>
   <a
-    class="sc-jSwlEQ kKXLnb"
+    class="sc-jTQCzO gpVTaK"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/chesnochnye-sazhalki-dlya-motobloka"
     role="menuitem"
   >
@@ -152,29 +152,29 @@ exports[`breadcrumbs clicking on the button should open a menu of subcategories 
 exports[`breadcrumbs should return breadcrumbs 1`] = `
 <div>
   <div
-    class="sc-bcPKhP ldiyQF"
+    class="sc-beySPh dMUqEM"
   >
     <div
       aria-label="breadcrumbs"
-      class="sc-grXZZQ cvUpwT"
+      class="sc-guDLey ldurXD"
       role="navigation"
     >
       <div
-        class="sc-dkjKgF wQuRS"
+        class="sc-dmyCSP HBqfv"
       >
         <a
-          class="sc-jSwlEQ kKXLnb"
+          class="sc-jTQCzO gpVTaK"
           href="/catalog/motoblochnoe-navesnoe-oborudovanie"
         >
           Мотоблочное навесное оборудование
         </a>
         <div
-          class="sc-hLclGa fytrDq"
+          class="sc-hLQSwg cCIAir"
           role="presentation"
         />
       </div>
       <div
-        class="sc-dkjKgF wQuRS"
+        class="sc-dmyCSP HBqfv"
       >
         Адаптеры для мотоблоков
       </div>
@@ -186,39 +186,39 @@ exports[`breadcrumbs should return breadcrumbs 1`] = `
 exports[`breadcrumbs should return breadcrumbs with detailed product 1`] = `
 <div>
   <div
-    class="sc-bcPKhP ldiyQF"
+    class="sc-beySPh dMUqEM"
   >
     <div
       aria-label="breadcrumbs"
-      class="sc-grXZZQ cvUpwT"
+      class="sc-guDLey ldurXD"
       role="navigation"
     >
       <div
-        class="sc-dkjKgF wQuRS"
+        class="sc-dmyCSP HBqfv"
       >
         <a
-          class="sc-jSwlEQ kKXLnb"
+          class="sc-jTQCzO gpVTaK"
           href="/catalog/motoblochnoe-navesnoe-oborudovanie"
         >
           Мотоблочное навесное оборудование
         </a>
         <div
-          class="sc-hLclGa fytrDq"
+          class="sc-hLQSwg cCIAir"
           role="presentation"
         />
       </div>
       <div
-        class="sc-dkjKgF wQuRS"
+        class="sc-dmyCSP HBqfv"
       >
         <a
-          class="sc-jSwlEQ kKXLnb"
+          class="sc-jTQCzO gpVTaK"
           href="/catalog/motoblochnoe-navesnoe-oborudovanie/adaptery-dlya-motoblokov"
         >
           Адаптеры для мотоблоков
         </a>
       </div>
       <div
-        class="sc-dkjKgF wQuRS"
+        class="sc-dmyCSP HBqfv"
       >
         Адаптер к мотоблоку "АРА"
       </div>
@@ -230,39 +230,39 @@ exports[`breadcrumbs should return breadcrumbs with detailed product 1`] = `
 exports[`breadcrumbs should return breadcrumbs with loader component 1`] = `
 <div>
   <div
-    class="sc-bcPKhP ldiyQF"
+    class="sc-beySPh dMUqEM"
   >
     <div
       aria-label="breadcrumbs"
-      class="sc-grXZZQ cvUpwT"
+      class="sc-guDLey ldurXD"
       role="navigation"
     >
       <div
-        class="sc-dkjKgF wQuRS"
+        class="sc-dmyCSP HBqfv"
       >
         <a
-          class="sc-jSwlEQ kKXLnb"
+          class="sc-jTQCzO gpVTaK"
           href="/catalog/motoblochnoe-navesnoe-oborudovanie"
         >
           Мотоблочное навесное оборудование
         </a>
         <div
-          class="sc-hLclGa fytrDq"
+          class="sc-hLQSwg cCIAir"
           role="presentation"
         />
       </div>
       <div
-        class="sc-dkjKgF wQuRS"
+        class="sc-dmyCSP HBqfv"
       >
         <a
-          class="sc-jSwlEQ kKXLnb"
+          class="sc-jTQCzO gpVTaK"
           href="/catalog/motoblochnoe-navesnoe-oborudovanie/adaptery-dlya-motoblokov"
         >
           Адаптеры для мотоблоков
         </a>
       </div>
       <div
-        class="sc-dkjKgF wQuRS"
+        class="sc-dmyCSP HBqfv"
       >
         <svg
           height="15px"

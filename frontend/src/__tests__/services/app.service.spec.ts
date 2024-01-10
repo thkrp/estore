@@ -1,7 +1,7 @@
 import { mockData } from 'app-shared';
-import { appService } from '../../services/app.service';
+import { appService } from '../../services/app';
 
-jest.mock('../../services/app.service');
+jest.mock('../../services/app');
 
 describe('app service', () => {
     it('fetchAppInfo should return site information', async () => {

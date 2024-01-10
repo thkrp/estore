@@ -1,8 +1,8 @@
-import { Brand, Product } from 'app-shared';
+import { Brand, Products } from 'app-shared';
 
-export interface ProductsOfSection {
+export interface ProductsOfSection extends Products {
     isLoading: boolean;
-    items?: Product[];
+    page: number;
 }
 
 export interface BrandsOfSection {

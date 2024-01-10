@@ -19,7 +19,6 @@ export const MobileStyled = styled.nav`
 
 export const LinkStyled = styled(Link)`
     flex: 0 0 25%;
-    background: skyblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +27,9 @@ export const LinkStyled = styled(Link)`
 export const MoreStyled = styled.button`
     flex: 0 0 25%;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const MoreLinkStyled = styled.nav`
@@ -54,4 +56,13 @@ export const LogoWrapperStyled = styled.div`
     height: 100%;
     display: flex;
     justify-content: space-between;
+`;
+
+export const IconStyled = styled.div`
+    max-width: 24px;
+    max-height: 24px;
+    width: 100%;
+    .color {
+        fill: black;
+    }
 `;

@@ -2,28 +2,44 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 import { cleanup, render } from '@testing-library/react';
-import { mockData } from 'app-shared';
+import { Locale, Localization, mockData } from 'app-shared';
 import { MemoryRouter } from 'react-router-dom';
 import * as sanitizer from '@braintree/sanitize-url';
+import { IntlProvider } from 'react-intl';
 import { TopNav } from '../../../components';
 
 describe('TopNav', () => {
     afterEach(cleanup);
 
     it('should be defined', () => {
-        const { container } = render(<TopNav menu={mockData.topMenu} />, { wrapper: MemoryRouter });
+        const { container } = render(
+            <IntlProvider key={Localization.ru} locale={Locale.ru} messages={mockData.localizationData}>
+                <TopNav menu={mockData.topMenu} />
+            </IntlProvider>,
+            { wrapper: MemoryRouter }
+        );
         expect(container).toBeDefined();
         expect(container).toMatchSnapshot();
     });
 
     it('sanitizeUrl has been called', () => {
         jest.spyOn(sanitizer, 'sanitizeUrl');
-        render(<TopNav menu={mockData.topMenu} />, { wrapper: MemoryRouter });
+        render(
+            <IntlProvider key={Localization.ru} locale={Locale.ru} messages={mockData.localizationData}>
+                <TopNav menu={mockData.topMenu} />
+            </IntlProvider>,
+            { wrapper: MemoryRouter }
+        );
         expect(sanitizer.sanitizeUrl).toHaveBeenCalled();
     });
 
     it('should return null if no menu', () => {
-        const { container } = render(<TopNav />, { wrapper: MemoryRouter });
+        const { container } = render(
+            <IntlProvider key={Localization.ru} locale={Locale.ru} messages={mockData.localizationData}>
+                <TopNav />
+            </IntlProvider>,
+            { wrapper: MemoryRouter }
+        );
         expect(container).toBeEmptyDOMElement();
     });
 });

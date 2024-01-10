@@ -1,4 +1,4 @@
-export interface BottomMenuItemDto {
+export interface BottomMenuItem {
     name: string;
     type: string;
     section: string | null;
@@ -8,5 +8,5 @@ export interface BottomMenuItemDto {
 export interface BottomMenu {
     name: string;
     sort: string;
-    items: BottomMenuItemDto[];
+    items: BottomMenuItem[];
 }

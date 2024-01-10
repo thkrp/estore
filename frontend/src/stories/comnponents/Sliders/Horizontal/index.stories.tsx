@@ -22,17 +22,19 @@ const meta = {
         type: {
             description: 'type of slides'
         },
-        count: {
-            description: 'visible slides'
-        },
-        className: {
-            description: 'class name'
-        },
-        speed: {
-            description: 'slides speed'
-        },
-        slidesToScroll: {
-            description: 'number of changing slides'
+        settings: {
+            slidesToShow: {
+                description: 'visible slides'
+            },
+            className: {
+                description: 'class name'
+            },
+            speed: {
+                description: 'slides speed'
+            },
+            slidesToScroll: {
+                description: 'number of changing slides'
+            }
         }
     }
 } satisfies Meta<typeof HorizontalSliderComponent>;
@@ -43,9 +45,11 @@ export const HorizontalSlider: Story = {
     args: {
         slides: mockData.arrivals,
         title: 'Arrivals',
-        count: 3,
         type: CardType.product,
-        speed: 500,
-        slidesToScroll: 1
+        settings: {
+            slidesToShow: 3,
+            speed: 500,
+            slidesToScroll: 1
+        }
     }
 };

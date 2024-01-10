@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Localization } from 'app-shared';
-import { localStorageService } from '../../services/local.storage.service';
+import { localStorageService } from '../../services/local-storage';
 import { ListItemStyled, ListStyled } from './index.styles';
 import { reload } from '../../common/helpers/reload.helper';
 

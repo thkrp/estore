@@ -3,15 +3,15 @@
 exports[`Product card component should return a card 1`] = `
 <div>
   <a
-    class="sc-bcPKhP kwXmRT"
+    class="sc-beySPh fRCHBs"
     href="/catalog/motoblochnoe-navesnoe-oborudovanie/adaptery-dlya-motoblokov/adapter-k-motobloku-ara"
     role="link"
   >
     <span
-      class="sc-grXZZQ hQYoSY"
+      class="sc-guDLey iqgXkp"
     />
     <h3
-      class="sc-dkjKgF gnGgQT"
+      class="sc-dmyCSP gTnXeK"
       title="Адаптер к мотоблоку \\"АРА\\""
     >
       Адаптер к мотоблоку "АРА"

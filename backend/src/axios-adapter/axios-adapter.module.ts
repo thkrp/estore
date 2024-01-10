@@ -14,7 +14,7 @@ export class AxiosAdapter implements OnModuleInit {
         private configService: ConfigService
     ) {}
 
-    public onModuleInit(): any {
+    public onModuleInit() {
         const { axiosRef: axios } = this.httpService;
         axios.defaults.baseURL = this.configService.get('BITRIX_BACKEND_ORIGIN');
         axios.defaults.headers.common['x-api-key'] = this.configService.get('BITRIX_API_KEY');

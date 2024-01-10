@@ -1,5 +1,5 @@
 import React, { FC, ReactElement } from 'react';
-import { BottomMenu, BottomMenuItemDto } from 'app-shared';
+import { BottomMenu, BottomMenuItem } from 'app-shared';
 import {
     FooterStyled,
     ListHeadingStyled,
@@ -31,7 +31,7 @@ enum LinkTypes {
     external = 'EXTERNAL'
 }
 
-const Links: { [key in LinkTypes]: (item: BottomMenuItemDto) => ReactElement } = {
+const Links: { [key in LinkTypes]: (item: BottomMenuItem) => ReactElement } = {
     [LinkTypes.section]: ({ url, name }) => <Link to={url}>{name}</Link>,
     [LinkTypes.link]: ({ url, name }) => <Link to={url}>{name}</Link>,
     [LinkTypes.phone]: ({ name }) => <ContactLink value={name} type="phone" hiddenIcon />,

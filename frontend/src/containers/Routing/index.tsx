@@ -8,6 +8,11 @@ import HomeLayout from '../../layouts/Home';
 import { Menu } from '../../store/app/types/app.state';
 import { RootState } from '../../store/types/root.state';
 import MainLayout from '../../layouts/Main';
+import Cart from '../../scenes/Cart';
+import { Routes } from '../../common/enums/routing/routes';
+import Authorization from '../../scenes/Authorization';
+import AdminDashboard from '../../scenes/AdminDashboard';
+import PrivateRoutes from './PrivateRoutes';
 
 type Props = {
     isLoading: boolean;
@@ -57,7 +62,7 @@ const Routing: FC<Props> = ({ isLoading, menu, info, appInit, netWorkError }) =>
         });
     };
 
-    const addPagesRoutes = (sections: TopMenu) => {
+    const addPageRoutes = (sections: TopMenu) => {
         if (!sections) {
             return null;
         }
@@ -71,19 +76,24 @@ const Routing: FC<Props> = ({ isLoading, menu, info, appInit, netWorkError }) =>
     return (
         <Router>
             <ReactRoutes>
-                <Route path="/" element={<HomeLayout info={info} menu={menu} />}>
+                <Route path={Routes.baseUrl} element={<HomeLayout info={info} menu={menu} />}>
                     <Route index element={<Home />} />
                 </Route>
-                <Route path="/" element={<MainLayout info={info} menu={menu} />}>
-                    {menu.top && addPagesRoutes(menu.top)}
+                <Route path={Routes.baseUrl} element={<MainLayout info={info} menu={menu} />}>
+                    {menu.top && addPageRoutes(menu.top)}
                 </Route>
-                <Route path="/catalog" element={<MainLayout info={info} menu={menu} />}>
+                <Route path={Routes.catalog} element={<MainLayout info={info} menu={menu} />}>
                     <Route index element={<Catalog subSections={menu.catalog} />} />
                     {menu.catalog && addCatalogRoutes(menu.catalog)}
                 </Route>
-                <Route path="/cart" element={<MainLayout info={info} menu={menu} />}>
-                    <Route index element={<div>Cart</div>} />
+                <Route path={Routes.cart} element={<MainLayout info={info} menu={menu} />}>
+                    <Route index element={<Cart />} />
                 </Route>
+                <Route path={Routes.authorization} index element={<Authorization />} />
+                <Route element={<PrivateRoutes />}>
+                    <Route path={Routes.adminDashboard} index element={<AdminDashboard />} />
+                </Route>
+                <Route path="*" element={<p>404!</p>} />
             </ReactRoutes>
         </Router>
     );

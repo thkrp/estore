@@ -3,15 +3,14 @@ import { connect } from 'react-redux';
 import { Product } from 'app-shared';
 import { useIntl } from 'react-intl';
 import { Helmet } from 'react-helmet-async';
-import { BestSales, Tabs } from './components';
+import { BestSales, Brands, Tabs, ViewedProducts } from './components';
 import { RootState } from '../../store/types/root.state';
 import { getArrivalsRoutine, getBestSalesRoutine, getBrandsRoutine, getDiscountedRoutine } from './routines';
 import { BrandsOfSection, ProductsOfSection } from './types/home.state';
 import { WrapperStyled } from './index.styles';
-import { HorizontalSlider } from '../../components';
 import { getViewedRoutine } from '../Catalog/routines';
 import { StateElements } from '../../common/enums/state.elements';
-import { CardType } from '../../common/enums/card.type';
+import { TabContent } from './types/tab.content';
 
 type Props = {
     arrivals: ProductsOfSection;
@@ -19,8 +18,8 @@ type Props = {
     bestSales: ProductsOfSection;
     viewed: Product[];
     brands: BrandsOfSection;
-    getArrivals: () => void;
-    getDiscounted: () => void;
+    getArrivals: (nextPage?: number) => void;
+    getDiscounted: (nextPage?: number) => void;
     getBestSales: () => void;
     getViewed: () => void;
     getBrands: () => void;
@@ -62,9 +61,22 @@ const Home: FC<Props> = ({
         }
     }, []);
 
-    const tabContent = {
-        [StateElements.arrivals]: arrivals.items,
-        [StateElements.discounted]: discounted.items
+    const tabContent: TabContent = {
+        [StateElements.arrivals]: arrivals,
+        [StateElements.discounted]: discounted
+    };
+
+    const loadMore: Partial<{ [key in StateElements]: () => void }> = {
+        [StateElements.arrivals]: () => {
+            getArrivals(arrivals.page + 1);
+        },
+        [StateElements.discounted]: () => {
+            getDiscounted(discounted.page + 1);
+        }
+    };
+
+    const onLoadMore = (code: StateElements) => {
+        loadMore[code]?.();
     };
 
     return (
@@ -73,14 +85,10 @@ const Home: FC<Props> = ({
                 <title>Home</title>
             </Helmet>
             <WrapperStyled>
-                <Tabs tabs={tabs} tabContent={tabContent} />
+                <Tabs tabs={tabs} tabContent={tabContent} onLoadMore={onLoadMore} />
                 <BestSales products={bestSales.items} isLoading={bestSales.isLoading} />
-                <HorizontalSlider slides={viewed} title={intl.formatMessage({ id: 'viewed' })} />
-                <HorizontalSlider
-                    slides={brands.items}
-                    title={intl.formatMessage({ id: 'brands' })}
-                    type={CardType.brand}
-                />
+                {!!viewed.length && <ViewedProducts slides={viewed} title={intl.formatMessage({ id: 'viewed' })} />}
+                <Brands slides={brands.items} title={intl.formatMessage({ id: 'brands' })} />
             </WrapperStyled>
         </>
     );

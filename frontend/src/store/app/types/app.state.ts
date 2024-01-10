@@ -1,8 +1,4 @@
-import { BottomMenu, CatalogMenu, GeneralInfo, TopMenu } from 'app-shared';
-
-type User = {
-    id: string;
-};
+import { BottomMenu, CatalogMenu, GeneralInfo, PublicUser, TopMenu } from 'app-shared';
 
 export type Menu = {
     bottom: BottomMenu[];
@@ -12,7 +8,7 @@ export type Menu = {
 
 export interface AppState {
     isLoading: boolean;
-    user: User | null;
+    user: PublicUser | null;
     menu?: Menu;
     info?: GeneralInfo;
     netWorkError?: boolean;

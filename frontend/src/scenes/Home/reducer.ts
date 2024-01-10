@@ -14,15 +14,24 @@ import { triggerStatePropertyLoaderHandler } from '../../store/handlers';
 const initialState: HomeState = {
     arrivals: {
         isLoading: true,
-        items: []
+        items: [],
+        page: 1,
+        total_count: 0,
+        pageSize: NaN
     },
     discounted: {
         isLoading: true,
-        items: []
+        items: [],
+        page: 1,
+        total_count: 0,
+        pageSize: NaN
     },
     bestSales: {
         isLoading: true,
-        items: []
+        items: [],
+        page: 1,
+        total_count: 0,
+        pageSize: NaN
     },
     brands: {
         isLoading: true,

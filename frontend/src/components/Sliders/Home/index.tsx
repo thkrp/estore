@@ -2,9 +2,9 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Slide1 from '../../../assets/images/slides/slide-1.jpg';
-import Slide2 from '../../../assets/images/slides/slide-2.jpg';
-import Slide3 from '../../../assets/images/slides/slide-3.jpg';
+import Slide1 from '../../../assets/images/slides/slide-1.1.jpg';
+import Slide2 from '../../../assets/images/slides/slide-2.1.jpg';
+import Slide3 from '../../../assets/images/slides/slide-3.1.jpg';
 import { SlideItemStyled, SlideTitleStyled, WrapperStyled } from './index.styles';
 
 const settings = {
@@ -56,6 +56,7 @@ const HomeSlider: React.FC<Props> = ({ slides = data }) => {
                 {slides.map(slide => (
                     <div key={slide.code}>
                         <SlideItemStyled $image={slide.image}>
+                            <img src={slide.image} alt={slide.title} />
                             <div>
                                 <SlideTitleStyled>{slide.title}</SlideTitleStyled>
                             </div>

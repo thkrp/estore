@@ -1,4 +1,4 @@
-import { stringHash } from '../../../src/utils/encription.helper';
+import { stringHash } from '../../../src/utils/encription.utils';
 
 describe('encryption helper', () => {
     it('should return hash string', () => {

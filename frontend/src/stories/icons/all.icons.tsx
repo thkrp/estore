@@ -8,6 +8,8 @@ import { ReactComponent as HorizontalLoaderIcon } from '../../assets/icons/horiz
 import { ReactComponent as ListIcon } from '../../assets/icons/list.svg';
 import { ReactComponent as LoaderIcon } from '../../assets/icons/loader.svg';
 import { ReactComponent as SearchIcon } from '../../assets/icons/search.svg';
+import { ReactComponent as HomeIcon } from '../../assets/icons/home.svg';
+import { ReactComponent as MoreIcon } from '../../assets/icons/more.svg';
 import { IconsStyled, IconStyled } from './index.styles';
 
 const icons = [
@@ -49,6 +51,14 @@ const icons = [
     {
         name: 'search.svg',
         Component: SearchIcon
+    },
+    {
+        name: 'home.svg',
+        Component: HomeIcon
+    },
+    {
+        name: 'more.svg',
+        Component: MoreIcon
     }
 ];
 

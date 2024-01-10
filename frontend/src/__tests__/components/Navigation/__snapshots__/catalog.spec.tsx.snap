@@ -3,65 +3,65 @@
 exports[`CatalogNav should be defined 1`] = `
 <div>
   <div
-    class="sc-bYUneI iDoLgO"
+    class="sc-ilxebA hQzSdn"
   >
     <div
-      class="sc-kMbQoj nRKsp"
+      class="sc-jIBlqr iKkUiM"
     >
       <span
-        class="sc-ilpitK iZdflc"
+        class="sc-hhyKGa ilIzZR"
       >
         <svg>
           list.svg
         </svg>
       </span>
       <a
-        class="sc-jIJgYh bIOgZE"
+        class="sc-gYrqIg hZxwYq"
         href="/catalog"
       >
         КАТАЛОГ ТОВАРОВ
       </a>
     </div>
     <div
-      class="sc-hhWzdI gBVoWr"
+      class="sc-cCzLxZ bYuvCp"
     >
       <a
-        class="sc-gXCJSa bETFlG"
+        class="sc-ckdEwu fugiOn"
         href="/catalog/tractors"
         title="Тракторы"
       >
         Тракторы
       </a>
       <a
-        class="sc-gXCJSa bETFlG"
+        class="sc-ckdEwu fugiOn"
         href="/catalog/motobloki"
         title="Мотоблоки"
       >
         Мотоблоки
       </a>
       <a
-        class="sc-gXCJSa bETFlG"
+        class="sc-ckdEwu fugiOn"
         href="/catalog/traktornoe-navesnoe-oborudovanie"
         title="Тракторное навесное оборудование"
       >
         Тракторное навесное оборудование
       </a>
       <a
-        class="sc-gXCJSa bETFlG"
+        class="sc-ckdEwu fugiOn"
         href="/catalog/motoblochnoe-navesnoe-oborudovanie"
         title="Мотоблочное навесное оборудование"
       >
         Мотоблочное навесное оборудование
       </a>
       <a
-        class="sc-gXCJSa bETFlG"
+        class="sc-ckdEwu fugiOn"
         href="/catalog/sredstva-zashchity-rasteniy"
         title="Средства защиты растений"
       >
         Средства защиты растений
       </a>
       <a
-        class="sc-gXCJSa bETFlG"
+        class="sc-ckdEwu fugiOn"
         href="/catalog/tekhnika-dlya-sada-i-ogoroda"
         title="Техника для сада и огорода"
       >

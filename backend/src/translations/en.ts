@@ -9,5 +9,7 @@ export default {
     brands: 'Brands',
     search: 'Search',
     home: 'Home',
-    more: 'More'
+    more: 'More',
+    addToCart: 'Add to cart',
+    about: 'About'
 };

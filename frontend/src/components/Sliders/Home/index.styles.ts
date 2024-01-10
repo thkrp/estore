@@ -7,8 +7,14 @@ export const WrapperStyled = styled.div`
 `;
 
 export const SlideItemStyled = styled.div<{ $image: string }>`
-    height: 320px;
-    background: ${({ $image }) => ($image ? `url(${$image})` : '')} no-repeat center center / cover;
+    position: relative;
+    display: block;
+    // background: ${({ $image }) => ($image ? `url(${$image})` : '')} no-repeat center center / cover;
+    img {
+        width: 100%;
+        height: 100%;
+        max-height: 320px;
+    }
 `;
 
 export const SlideTitleStyled = styled.h3`

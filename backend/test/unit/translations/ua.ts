@@ -7,5 +7,9 @@ export default {
     bestSales: 'Топ продажів',
     viewed: 'Переглянуті товари',
     brands: 'Виробники',
-    search: 'Пошук'
+    search: 'Пошук',
+    home: 'Home',
+    more: 'ще',
+    addToCart: 'купити',
+    about: 'про магазин'
 };

@@ -48,3 +48,13 @@ export const ContentStyled = styled.div`
     display: flex;
     flex-wrap: wrap;
 `;
+
+export const ShowMoreStyled = styled.div<{ $isLoading: boolean }>`
+    width: 100px;
+    margin: 5px auto;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    pointer-events: ${({ $isLoading }) => ($isLoading ? 'none' : 'auto')};
+`;

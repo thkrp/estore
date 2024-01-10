@@ -1,38 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CatalogNav should be defined 1`] = `
+exports[`MobileNav should be defined 1`] = `
 <div>
   <div
-    class="sc-clcPSL ejIKSr"
+    class="sc-EFWon kWwuUb"
   >
-    <div
-      class="sc-fbzYXw cRYaIo"
+    <nav
+      class="sc-fYlSAf ipBHux"
     >
       <a
-        class="sc-GFXod dLNAup"
+        class="sc-dxjrPO geWoOc"
         href="/"
+        role="menuitem"
       >
-        Home
+        <div
+          class="sc-hnmNqB idZQDj"
+        >
+          <svg>
+            home.svg
+          </svg>
+        </div>
       </a>
       <a
-        class="sc-GFXod dLNAup"
+        class="sc-dxjrPO geWoOc"
         href="/catalog"
+        role="menuitem"
       >
-        Catalog
+        <div
+          class="sc-hnmNqB idZQDj"
+        >
+          <svg>
+            list.svg
+          </svg>
+        </div>
       </a>
       <a
-        class="sc-GFXod dLNAup"
+        class="sc-dxjrPO geWoOc"
         href="/cart"
+        role="menuitem"
       >
-        Cart
+        <div
+          class="sc-hnmNqB idZQDj"
+        >
+          <svg>
+            cart.svg
+          </svg>
+        </div>
       </a>
       <button
-        class="sc-fXitXF hjVjVE"
+        class="sc-UFult kCBzan"
         type="button"
       >
-        More
+        <div
+          class="sc-hnmNqB idZQDj"
+        >
+          <svg>
+            more.svg
+          </svg>
+        </div>
       </button>
-    </div>
+    </nav>
   </div>
 </div>
 `;

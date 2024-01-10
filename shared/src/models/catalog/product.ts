@@ -13,5 +13,5 @@ export interface Product {
 }
 
 export interface DetailedProduct extends Product {
-    text?: string;
+    detail_text?: string;
 }

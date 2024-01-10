@@ -7,5 +7,9 @@ export default {
     bestSales: 'Топ продаж',
     viewed: 'Просмотренные товары',
     brands: 'Производители',
-    search: 'Поиск'
+    search: 'Поиск',
+    home: 'Home',
+    more: 'еще',
+    addToCart: 'купить',
+    about: 'о магазине'
 };

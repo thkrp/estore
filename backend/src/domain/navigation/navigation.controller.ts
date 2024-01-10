@@ -1,11 +1,17 @@
-import { BadRequestException, Controller, Get } from '@nestjs/common';
-import { AppResponse, BottomMenu, CatalogMenu, TopMenu } from 'app-shared';
+import { BadRequestException, Controller, Get, Version } from '@nestjs/common';
+import { BottomMenu, CatalogMenu, TopMenu } from 'app-shared';
+import { PublicRoute } from '../auth/decorators/public.route';
+import { AppResponse } from '../../response/app.response';
 import { NavigationService } from './navigation.service';
+import { ApiTags } from '@nestjs/swagger';
 
+@PublicRoute()
 @Controller('navigation')
 export class NavigationController {
     constructor(private readonly navigateService: NavigationService) {}
 
+    @Version('1')
+    @ApiTags('bitrix')
     @Get('/top-menu')
     async fetchTopMenu(): Promise<AppResponse<TopMenu>> {
         try {
@@ -17,6 +23,8 @@ export class NavigationController {
         }
     }
 
+    @Version('1')
+    @ApiTags('bitrix')
     @Get('/bottom-menu')
     async fetchBottomMenu(): Promise<AppResponse<BottomMenu>> {
         try {
@@ -28,6 +36,8 @@ export class NavigationController {
         }
     }
 
+    @Version('1')
+    @ApiTags('bitrix')
     @Get('/catalog-menu')
     async fetchCatalogMenu(): Promise<AppResponse<CatalogMenu>> {
         try {

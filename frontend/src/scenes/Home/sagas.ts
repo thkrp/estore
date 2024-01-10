@@ -1,5 +1,6 @@
 import { all, call, put, takeEvery } from 'redux-saga/effects';
-import { AppResponse, Product } from 'app-shared';
+import { AppResponse, Product, Products } from 'app-shared';
+import { Action } from 'redux-actions';
 import {
     getArrivalsRoutine,
     getBestSalesRoutine,
@@ -7,10 +8,10 @@ import {
     triggerItemsForSectionLoaderRoutine,
     getBrandsRoutine
 } from './routines';
-import { catalogService } from '../../services/catalog.service';
+import { catalogService } from '../../services/catalog';
 import { StateElements } from '../../common/enums/state.elements';
 
-function* getArrivalsHandler() {
+function* getArrivalsHandler(action: Action<number>) {
     try {
         yield put(
             triggerItemsForSectionLoaderRoutine.success({
@@ -18,11 +19,15 @@ function* getArrivalsHandler() {
                 element: StateElements.arrivals
             })
         );
-        const { data }: AppResponse<Product[]> = yield call(catalogService.getArrivals);
+        const page = action.payload;
+        const { data }: AppResponse<Products> = yield call(catalogService.getArrivals, page);
         yield put(
             getArrivalsRoutine.success({
-                items: data,
-                section: StateElements.arrivals
+                section: StateElements.arrivals,
+                items: data?.items,
+                total_count: data?.total_count,
+                page,
+                pageSize: data?.pageSize
             })
         );
     } catch (e) {
@@ -41,7 +46,7 @@ function* watchGetArrivals() {
     yield takeEvery(getArrivalsRoutine.trigger, getArrivalsHandler);
 }
 
-function* getDiscountedHandler() {
+function* getDiscountedHandler(action: Action<number>) {
     try {
         yield put(
             triggerItemsForSectionLoaderRoutine.success({
@@ -49,11 +54,15 @@ function* getDiscountedHandler() {
                 element: StateElements.discounted
             })
         );
-        const { data }: AppResponse<Product[]> = yield call(catalogService.getDiscounted);
+        const page = action.payload;
+        const { data }: AppResponse<Products> = yield call(catalogService.getDiscounted, page);
         yield put(
-            getArrivalsRoutine.success({
-                items: data,
-                section: StateElements.discounted
+            getDiscountedRoutine.success({
+                section: StateElements.discounted,
+                items: data?.items,
+                total_count: data?.total_count,
+                page,
+                pageSize: data?.pageSize
             })
         );
     } catch (e) {
@@ -100,7 +109,7 @@ function* getBestSalesHandler() {
 }
 
 function* watchGetBestSales() {
-    yield takeEvery(getArrivalsRoutine.trigger, getBestSalesHandler);
+    yield takeEvery(getBestSalesRoutine.trigger, getBestSalesHandler);
 }
 
 function* getBrandsHandler() {

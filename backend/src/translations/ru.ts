@@ -9,5 +9,7 @@ export default {
     brands: 'Производители',
     search: 'Поиск',
     home: 'Home',
-    more: 'еще'
+    more: 'еще',
+    addToCart: 'купить',
+    about: 'о магазине'
 };

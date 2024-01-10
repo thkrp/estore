@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import Slider from 'react-slick';
+import Slider, { Settings } from 'react-slick';
 import { Brand, Product } from 'app-shared';
 import ProductCard from '../../Cards/ProductCard';
 import BrandCard from '../../Cards/BrandCard';
@@ -15,15 +15,10 @@ import {
     WrapperStyled
 } from './index.styles';
 import { CardType } from '../../../common/enums/card.type';
+import { HorizontalSliderProps } from '../../../common/types/horizontal.slider.props';
 
-type Props<T> = {
-    slides?: T[];
-    title: string;
-    type?: CardType;
-    count?: number;
-    className?: string;
-    speed?: number;
-    slidesToScroll?: number;
+type Props<T> = HorizontalSliderProps<T> & {
+    settings?: Settings;
 };
 
 const CardComponents = {
@@ -35,24 +30,28 @@ const HorizontalSlider = <T extends { code: string }>({
     slides = [],
     title,
     type = CardType.product,
-    count = 6,
-    className = '',
-    speed = 500,
-    slidesToScroll = 1
+    settings: {
+        slidesToShow = 6,
+        className = '',
+        speed = 500,
+        slidesToScroll = 1,
+        responsive = [],
+        infinite = false
+    } = {}
 }: Props<T>) => {
     const slider = useRef<Slider>(null);
-    const infinite = slides.length > count;
-
-    const settings = {
+    const isInfinite = infinite || slides.length > slidesToShow;
+    const settings: Settings = {
         infinite,
         speed,
-        slidesToShow: count,
+        slidesToShow,
         slidesToScroll,
         arrows: false,
         dots: false,
         draggable: false,
         swipe: true,
-        className: `horizontal-slider ${className}`
+        className: `horizontal-slider ${className}`,
+        responsive
     };
 
     const onNext = () => {
@@ -69,7 +68,7 @@ const HorizontalSlider = <T extends { code: string }>({
                 <SlideHeaderStyled>
                     <HeadingStyled>{title}</HeadingStyled>
                     <LineStyled />
-                    {infinite && (
+                    {isInfinite && (
                         <ArrowsStyled>
                             <ArrowLeftStyled role="presentation" onClick={() => onPrev()}>
                                 <ArrowIcon />

@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { CatalogMenu } from 'app-shared';
 import { RootState } from '../../store/types/root.state';
 import { Breadcrumb } from '../types/breadcrumbs';
+import { getAppState, getCatalogState } from '../helpers/get.state.helper';
 
 const BREADCRUMBS_MAX_LENGTH = 3;
 
@@ -17,8 +18,6 @@ type Accumulator = {
 const useBreadcrumbs = () => {
     const { id } = useParams();
     const { pathname, key } = useLocation();
-    const getAppState = (state: RootState) => state.app;
-    const getCatalogState = (state: RootState) => state.catalog;
     const sections = useSelector((rootState: RootState) => getAppState(rootState).menu?.catalog);
     const product = useSelector((rootState: RootState) => getCatalogState(rootState).detailed);
 

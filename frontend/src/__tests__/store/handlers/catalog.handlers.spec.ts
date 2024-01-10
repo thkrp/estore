@@ -11,7 +11,7 @@ describe('catalog handlers', () => {
     beforeEach(() => {
         state = {
             viewed: [],
-            products: { isLoading: false }
+            products: { isLoading: false, items: [], total_count: 0, pageSize: NaN }
         };
     });
 

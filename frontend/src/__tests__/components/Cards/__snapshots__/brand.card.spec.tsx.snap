@@ -3,12 +3,12 @@
 exports[`Brand card component should return a card 1`] = `
 <div>
   <a
-    class="sc-bcPKhP iTEbzn"
+    class="sc-beySPh iLWaey"
     href="about:blank"
     role="link"
   >
     <span
-      class="sc-grXZZQ bgGREK"
+      class="sc-guDLey bYUXYX"
     />
   </a>
 </div>

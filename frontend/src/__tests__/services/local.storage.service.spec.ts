@@ -1,5 +1,5 @@
 import { Localization } from 'app-shared';
-import { localStorageService } from '../../services/local.storage.service';
+import { localStorageService } from '../../services/local-storage';
 
 describe('local storage service', () => {
     beforeEach(() => {

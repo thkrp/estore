@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { theme } from '../../styles/theme';
+import { media } from '../../styles/media';
 
 export const WrapperStyled = styled.footer`
     margin: auto 0 0;
@@ -9,6 +10,9 @@ export const WrapperStyled = styled.footer`
 export const FooterStyled = styled.div`
     display: flex;
     padding: 20px 0 60px;
+    ${media.tablet`
+        flex-wrap: wrap;
+    `};
 `;
 
 export const LogoWrapperStyled = styled.div`
@@ -16,6 +20,10 @@ export const LogoWrapperStyled = styled.div`
     flex-wrap: wrap;
     flex: 0 0 30%;
     align-content: flex-start;
+    ${media.tablet`
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    `};
 `;
 
 export const LogoDescriptionStyled = styled.div`
@@ -37,6 +45,11 @@ export const ListWrapperStyled = styled.div`
     &:last-child {
         margin-right: 0;
     }
+
+    ${media.phoneMd`
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    `};
 `;
 
 export const ListHeadingStyled = styled.h3`

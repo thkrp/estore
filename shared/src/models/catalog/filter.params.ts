@@ -1,3 +1,4 @@
 export interface FilterParams {
-    section?: string
+    section?: string,
+    productCodes?: string
 }

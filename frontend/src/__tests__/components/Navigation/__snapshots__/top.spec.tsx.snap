@@ -3,70 +3,79 @@
 exports[`TopNav should be defined 1`] = `
 <div>
   <div
-    class="sc-bcPKhP bzTsiy"
+    class="sc-beySPh dhajrx"
   >
     <div
-      class="sc-grXZZQ kUUMuW"
+      class="sc-guDLey kNVHGe"
     >
       <nav
-        class="sc-dkjKgF eZRrsL"
+        class="sc-dmyCSP iQlwUQ"
       >
         <div
-          class="sc-hLclGa daPBmg"
+          class="sc-gLLuof csHbwu"
         >
-          <a
-            class="sc-eDnVMP kgNNit"
-            href="/o-magazine"
-          >
-            О магазине
-          </a>
+          about
         </div>
         <div
-          class="sc-hLclGa daPBmg"
+          class="sc-hLQSwg jfTLwi"
         >
-          <a
-            class="sc-eDnVMP kgNNit"
-            href="/garantii-i-vozvrat"
+          <div
+            class="sc-eDLKkx fMDPuT"
           >
-            Гарантии и возврат
-          </a>
-        </div>
-        <div
-          class="sc-hLclGa daPBmg"
-        >
-          <a
-            class="sc-eDnVMP kgNNit"
-            href="/oplata-i-dostavka"
+            <a
+              class="sc-jTQCzO kKgqDS"
+              href="/o-magazine"
+            >
+              О магазине
+            </a>
+          </div>
+          <div
+            class="sc-eDLKkx fMDPuT"
           >
-            Оплата и доставка
-          </a>
-        </div>
-        <div
-          class="sc-hLclGa daPBmg"
-        >
-          <a
-            class="sc-eDnVMP kgNNit"
-            href="/kontakty"
+            <a
+              class="sc-jTQCzO kKgqDS"
+              href="/garantii-i-vozvrat"
+            >
+              Гарантии и возврат
+            </a>
+          </div>
+          <div
+            class="sc-eDLKkx fMDPuT"
           >
-            Контакты
-          </a>
+            <a
+              class="sc-jTQCzO kKgqDS"
+              href="/oplata-i-dostavka"
+            >
+              Оплата и доставка
+            </a>
+          </div>
+          <div
+            class="sc-eDLKkx fMDPuT"
+          >
+            <a
+              class="sc-jTQCzO kKgqDS"
+              href="/kontakty"
+            >
+              Контакты
+            </a>
+          </div>
         </div>
       </nav>
       <div
-        class="sc-jSwlEQ cYCoeh"
+        class="sc-iBdnpw iXoRaz"
       >
         <div
-          class="sc-gKHVLF fZEJrJ active"
+          class="sc-fsYfdN frNxBN active"
         >
           ua
         </div>
         <div
-          class="sc-gKHVLF bBQtV"
+          class="sc-fsYfdN cheXkN"
         >
           ru
         </div>
         <div
-          class="sc-gKHVLF bBQtV"
+          class="sc-fsYfdN cheXkN"
         >
           en
         </div>

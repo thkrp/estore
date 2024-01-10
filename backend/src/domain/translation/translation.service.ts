@@ -3,7 +3,7 @@ import { defaultLocalization, Localization, TranslationHashes, Translations } fr
 import ruTranslation from '../../translations/ru';
 import enTranslation from '../../translations/en';
 import uaTranslation from '../../translations/ua';
-import { stringHash } from '../../utils/encription.helper';
+import { stringHash } from '../../utils/encription.utils';
 
 @Injectable()
 export class TranslationService {
@@ -22,11 +22,14 @@ export class TranslationService {
         };
     }
 
-    getTranslation(locale: string) {
+    getTranslation(locale: keyof Translations) {
         return this.#translations[locale] || this.#translations[defaultLocalization];
     }
 
     getTranslationHash(locale?: Localization) {
+        if (!locale) {
+            return this.#translationHashes[defaultLocalization];
+        }
         return this.#translationHashes[locale] || this.#translationHashes[defaultLocalization];
     }
 }

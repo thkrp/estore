@@ -1,8 +1,8 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { Localization, Locale, LocaleMessages } from 'app-shared';
 import { IntlProvider } from 'react-intl';
-import { localStorageService } from '../../services/local.storage.service';
-import { appService } from '../../services/app.service';
+import { localStorageService } from '../../services/local-storage';
+import { appService } from '../../services/app';
 
 type Props = {
     children: React.ReactNode;
@@ -26,13 +26,13 @@ const LocalizationProvider: FC<Props> = ({ children }) => {
     });
 
     const initLocale = async () => {
-        const { data: hash } = await appService.getTranslationHash(localization);
-
+        const { data: responseData } = await appService.getTranslationHash(localization);
+        const hash = responseData?.translationHash;
         if (hash && locale?.messages?.hash !== hash) {
             const { data } = await appService.getTranslation(localization);
-
+            const translation = data?.translation;
             const newLocaleData = {
-                data,
+                data: translation,
                 hash
             };
             setLocale({ messages: newLocaleData });

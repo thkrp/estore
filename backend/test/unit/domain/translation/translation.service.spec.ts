@@ -23,19 +23,21 @@ describe('TranslationService', () => {
     });
 
     it('should return default localization if locale does not exist', () => {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         expect(service.getTranslation(null)).toEqual(uaTranslation);
     });
 
     it('should return ru localization', () => {
-        expect(service.getTranslation('ru')).toEqual(ruTranslation);
+        expect(service.getTranslation(Localization.ru)).toEqual(ruTranslation);
     });
 
     it('should return en localization', () => {
-        expect(service.getTranslation('en')).toEqual(enTranslation);
+        expect(service.getTranslation(Localization.en)).toEqual(enTranslation);
     });
 
     it('should return ru localization', () => {
-        expect(service.getTranslation('ua')).toEqual(uaTranslation);
+        expect(service.getTranslation(Localization.ua)).toEqual(uaTranslation);
     });
 
     it('should return hash string', () => {

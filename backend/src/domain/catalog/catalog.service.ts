@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Brand, DetailedProduct, Product } from 'app-shared';
+import { Brand, DetailedProduct, FilterParams, Product, Products } from 'app-shared';
 import { AxiosAdapterService } from '../../axios-adapter/axios-adapter.service';
 
 @Injectable()
@@ -22,17 +22,19 @@ export class CatalogService {
         return data;
     }
 
-    async getArrivals(): Promise<Product[]> {
-        const { data } = await this.apiService.doGet<Product[]>({
-            url: `/catalog/arrivals`
+    async getArrivals(pageNumber: number = 1): Promise<Products> {
+        const { data } = await this.apiService.doGet<Products>({
+            url: `/catalog/arrivals`,
+            queryParams: { pageNumber }
         });
 
         return data;
     }
 
-    async getDiscounted(): Promise<Product[]> {
-        const { data } = await this.apiService.doGet<Product[]>({
-            url: `/catalog/discounted`
+    async getDiscounted(pageNumber: number = 1): Promise<Products> {
+        const { data } = await this.apiService.doGet<Products>({
+            url: `/catalog/discounted`,
+            queryParams: { pageNumber }
         });
 
         return data;
@@ -46,7 +48,7 @@ export class CatalogService {
         return data;
     }
 
-    async getProducts(queryParams: any): Promise<Product[]> {
+    async getProducts(queryParams: FilterParams): Promise<Product[]> {
         const { data } = await this.apiService.doGet<Product[]>({
             url: `/catalog/products`,
             queryParams

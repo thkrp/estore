@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Link from '../../Links/Link';
 import { theme } from '../../../styles/theme';
+import { media } from '../../../styles/media';
 
 export const CardStyled = styled(Link)`
     flex: 0 0 25%;
@@ -22,6 +23,16 @@ export const CardStyled = styled(Link)`
     &.slider {
         margin: 15px 0;
     }
+
+    ${media.untilTabletLg`
+        flex: 0 0 33.333333333%;
+    `}
+    ${media.untilTabletLg`
+        flex: 0 0 50%;
+    `}
+    ${media.untilPhoneMd`
+        flex: 1 1 100%;
+    `}
 `;
 
 export const ImageStyled = styled.span<{ $image: string }>`

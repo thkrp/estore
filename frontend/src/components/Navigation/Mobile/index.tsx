@@ -1,6 +1,9 @@
 import React, { FC, useState } from 'react';
 import { GeneralInfo } from 'app-shared';
-import { FormattedMessage } from 'react-intl';
+import { ReactComponent as HomeIcon } from '../../../assets/icons/home.svg';
+import { ReactComponent as ListIcon } from '../../../assets/icons/list.svg';
+import { ReactComponent as CartIcon } from '../../../assets/icons/cart.svg';
+import { ReactComponent as MoreIcon } from '../../../assets/icons/more.svg';
 import {
     LinkStyled,
     LogoWrapperStyled,
@@ -8,12 +11,14 @@ import {
     MoreLinkStyled,
     MoreStyled,
     MoreTopStyled,
-    WrapperStyled
+    WrapperStyled,
+    IconStyled
 } from './index.styles';
 import Logo from '../../Logo';
 import { Menu } from '../../../store/app/types/app.state';
 import Language from '../../Language';
 import Link from '../../Links/Link';
+import { Routes } from '../../../common/enums/routing/routes';
 
 type Props = {
     info?: GeneralInfo;
@@ -26,17 +31,25 @@ const MobileNav: FC<Props> = ({ info, menu }) => {
     return (
         <WrapperStyled>
             <MobileStyled>
-                <LinkStyled to="/" role="menuitem">
-                    <FormattedMessage id="home" />
+                <LinkStyled to={Routes.baseUrl} role="menuitem">
+                    <IconStyled>
+                        <HomeIcon />
+                    </IconStyled>
                 </LinkStyled>
-                <LinkStyled to="/catalog" role="menuitem">
-                    <FormattedMessage id="catalog" />
+                <LinkStyled to={Routes.catalog} role="menuitem">
+                    <IconStyled>
+                        <ListIcon />
+                    </IconStyled>
                 </LinkStyled>
-                <LinkStyled to="/cart" role="menuitem">
-                    <FormattedMessage id="cart" />
+                <LinkStyled to={Routes.cart} role="menuitem">
+                    <IconStyled>
+                        <CartIcon />
+                    </IconStyled>
                 </LinkStyled>
                 <MoreStyled type="button" onClick={() => setShowMore(prev => !prev)}>
-                    <FormattedMessage id="more" />
+                    <IconStyled>
+                        <MoreIcon />
+                    </IconStyled>
                 </MoreStyled>
             </MobileStyled>
             {showMore && (

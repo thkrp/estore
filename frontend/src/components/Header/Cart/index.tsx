@@ -8,19 +8,23 @@ import {
     QtyStyled,
     WrapperStyled
 } from './index.styles';
+import useCart from '../../../common/hooks/use.cart';
+import { Routes } from '../../../common/enums/routing/routes';
 
 const Cart = () => {
+    const { count, sum } = useCart();
+
     return (
         <WrapperStyled>
-            <CartLinkStyled to="/">
-                <QtyStyled>2</QtyStyled>
+            <CartLinkStyled to={Routes.cart}>
+                <QtyStyled>{count}</QtyStyled>
             </CartLinkStyled>
             <PriceWrapperStyled>
-                <CartLabelStyled to="/">
+                <CartLabelStyled to={Routes.cart}>
                     <FormattedMessage id="cart" />:
                 </CartLabelStyled>
                 <PriceStyled>
-                    14289{' '}
+                    {sum}{' '}
                     <span>
                         <FormattedMessage id="currency" values={{ uah: <>&#8372;</> }} />
                     </span>

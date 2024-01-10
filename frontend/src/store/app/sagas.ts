@@ -1,7 +1,9 @@
 import { all, call, put, takeEvery } from 'redux-saga/effects';
-import { AppResponse, BottomMenu, CatalogMenu, GeneralInfo, TopMenu } from 'app-shared';
+import { AppResponse, AuthResponse, BottomMenu, CatalogMenu, GeneralInfo, TopMenu } from 'app-shared';
 import { appInitRoutine, triggerLoaderRoutine } from './routines';
-import { appService } from '../../services/app.service';
+import { appService } from '../../services/app';
+import { getCartItemsRoutine } from '../../scenes/Cart/routines';
+import { userService } from '../../services/user';
 
 function* appInitHandler() {
     try {
@@ -10,8 +12,11 @@ function* appInitHandler() {
         const { data: topMenu }: AppResponse<TopMenu> = yield call(appService.fetchTopMenu);
         const { data: bottomMenu }: AppResponse<BottomMenu> = yield call(appService.fetchBottomMenu);
         const { data: catalogMenu }: AppResponse<CatalogMenu> = yield call(appService.fetchCatalogMenu);
+        const { data: authResponse }: AppResponse<AuthResponse> = yield call(userService.checkAuth);
+        const user = authResponse?.user || null;
         yield put(
             appInitRoutine.success({
+                user,
                 info,
                 menu: {
                     top: topMenu,
@@ -20,6 +25,7 @@ function* appInitHandler() {
                 }
             })
         );
+        yield put(getCartItemsRoutine.trigger());
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (e: any) {
         yield put(appInitRoutine.failure(e));

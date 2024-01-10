@@ -13,7 +13,10 @@ import { triggerStatePropertyLoaderHandler } from '../../store/handlers';
 const initialState: CatalogState = {
     viewed: [],
     products: {
-        isLoading: true
+        isLoading: true,
+        items: [],
+        total_count: 0,
+        pageSize: NaN
     }
 };
 

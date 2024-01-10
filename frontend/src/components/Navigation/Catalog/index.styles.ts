@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { theme } from '../../../styles/theme';
 import Link from '../../Links/Link';
+import { media } from '../../../styles/media';
 
 export const WrapperStyled = styled.div`
     height: 100%;
@@ -17,6 +18,9 @@ export const HeadingStyled = styled.div`
     cursor: pointer;
     border-radius: 4px 0 0;
     width: 100%;
+    ${media.untilTabletLg`
+        margin-bottom: 10px;
+    `}
 `;
 
 export const IconStyled = styled.span`
@@ -42,6 +46,9 @@ export const ListStyled = styled.div`
     border-top: none;
     border-radius: 0 0 0 4px;
     width: 100%;
+    ${media.untilTabletLg`
+        display: none;
+    `}
 `;
 
 export const ElementStyled = styled(Link)`

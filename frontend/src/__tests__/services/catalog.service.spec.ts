@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
 import { mockData } from 'app-shared';
-import { catalogService } from '../../services/catalog.service';
+import { catalogService } from '../../services/catalog';
 
-jest.mock('../../services/catalog.service');
+jest.mock('../../services/catalog');
 
 describe('catalog service', () => {
     it('getArrivals should return an array of products', async () => {

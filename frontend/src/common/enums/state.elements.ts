@@ -3,5 +3,6 @@ export enum StateElements {
     discounted = 'discounted',
     bestSales = 'bestSales',
     brands = 'brands',
-    products = 'products'
+    products = 'products',
+    cart = 'cart'
 }

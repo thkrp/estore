@@ -1,21 +1,21 @@
 import { all, call, put, takeEvery, takeLatest } from 'redux-saga/effects';
 import { AppResponse, FilterParams, Product } from 'app-shared';
 import { Action } from 'redux-actions';
-import { catalogService } from '../../services/catalog.service';
+import { catalogService } from '../../services/catalog';
 import {
+    addViewedRoutine,
     getDetailedProductRoutine,
     getProductsRoutine,
     getViewedRoutine,
     triggerProductsLoaderRoutine
 } from './routines';
 import { StateElements } from '../../common/enums/state.elements';
+import { localStorageService } from '../../services/local-storage';
 
 function* getViewedHandler() {
     try {
-        /** TODO: Add getting viewed products instead of arrivals */
-        const { data }: AppResponse<Product[]> = yield call(catalogService.getArrivals);
-        const viewed = data || [];
-        yield put(getViewedRoutine.success([...viewed, ...viewed]));
+        const { data }: AppResponse<Product[]> = yield call([catalogService, catalogService.getViewedProducts]);
+        yield put(getViewedRoutine.success(data));
     } catch (e) {
         console.error(e);
     }
@@ -23,6 +23,19 @@ function* getViewedHandler() {
 
 function* watchGetViewed() {
     yield takeEvery(getViewedRoutine.trigger, getViewedHandler);
+}
+
+function* addViewedHandler(action: Action<Product>) {
+    try {
+        const product = action.payload;
+        yield call([localStorageService, localStorageService.addViewedItem], product.code);
+    } catch (e) {
+        console.error(e);
+    }
+}
+
+function* watchAddViewed() {
+    yield takeEvery(addViewedRoutine.trigger, addViewedHandler);
 }
 
 function* getProductsHandler(action: Action<FilterParams>) {
@@ -67,5 +80,5 @@ function* watchGetDetailed() {
 }
 
 export default function* catalogSaga() {
-    yield all([watchGetViewed(), watchGetDetailed(), watchGetProducts()]);
+    yield all([watchGetViewed(), watchGetDetailed(), watchGetProducts(), watchAddViewed()]);
 }

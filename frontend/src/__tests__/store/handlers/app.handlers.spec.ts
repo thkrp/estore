@@ -16,7 +16,7 @@ describe('app handlers', () => {
             bottom: bottomMenu
         };
 
-        expect(appInitHandler(state, { menu, info })).toEqual({ ...state, menu, info });
+        expect(appInitHandler(state, { menu, info, user: null })).toEqual({ ...state, menu, info });
     });
 
     it('appInitFailure handler should return netWorkError - true if the error code is ERR_NETWORK', () => {

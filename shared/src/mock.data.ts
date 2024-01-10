@@ -1742,7 +1742,10 @@ export const mockData: any = {
         "bestSales": "Топ продаж",
         "viewed": "Просмотренные товары",
         "brands": "Производители",
-        "search": "Поиск"
+        "search": "Поиск",
+        "home": "Home",
+        "more": "еще",
+        "about": "about"
     }
 }
 

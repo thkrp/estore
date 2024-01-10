@@ -13,6 +13,8 @@ import HomeSlider from './Sliders/Home';
 import InputText from './InputText';
 import MobileNav from './Navigation/Mobile';
 import Search from './Search';
+import CleanHtml from './Html';
+import Login from './MaterialUi/Auth/Login';
 
 export {
     Container,
@@ -29,5 +31,7 @@ export {
     HomeSlider,
     InputText,
     MobileNav,
-    Search
+    Search,
+    CleanHtml,
+    Login
 };

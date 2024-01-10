@@ -7,5 +7,9 @@ export default {
     bestSales: 'Best Sales',
     viewed: 'Recently Viewed',
     brands: 'Brands',
-    search: 'Search'
+    search: 'Search',
+    home: 'Home',
+    more: 'More',
+    addToCart: 'Add to cart',
+    about: 'About'
 };

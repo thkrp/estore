@@ -15,6 +15,7 @@ import MobileNav from './Navigation/Mobile';
 import Search from './Search';
 import CleanHtml from './Html';
 import Login from './MaterialUi/Auth/Login';
+import DropdownList from './MaterialUi/DropdownList';
 
 export {
     Container,
@@ -33,5 +34,6 @@ export {
     MobileNav,
     Search,
     CleanHtml,
-    Login
+    Login,
+    DropdownList
 };

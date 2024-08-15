@@ -3,7 +3,7 @@ import { AppResponse, AuthResponse, BottomMenu, CatalogMenu, GeneralInfo, TopMen
 import { appInitRoutine, triggerLoaderRoutine } from './routines';
 import { appService } from '../../services/app';
 import { getCartItemsRoutine } from '../../scenes/Cart/routines';
-import { userService } from '../../services/user';
+import { authService } from '../../services/auth';
 
 function* appInitHandler() {
     try {
@@ -12,7 +12,7 @@ function* appInitHandler() {
         const { data: topMenu }: AppResponse<TopMenu> = yield call(appService.fetchTopMenu);
         const { data: bottomMenu }: AppResponse<BottomMenu> = yield call(appService.fetchBottomMenu);
         const { data: catalogMenu }: AppResponse<CatalogMenu> = yield call(appService.fetchCatalogMenu);
-        const { data: authResponse }: AppResponse<AuthResponse> = yield call(userService.checkAuth);
+        const { data: authResponse }: AppResponse<AuthResponse> = yield call([authService, authService.checkAuth]);
         const user = authResponse?.user || null;
         yield put(
             appInitRoutine.success({

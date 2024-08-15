@@ -6,7 +6,8 @@ export class UserMapper {
         return {
             id: user.id!,
             email: user.email,
-            isActive: user.isActive
+            isActive: user.isActive,
+            role: user.role
         };
     }
 }

@@ -1,4 +1,5 @@
 import { Column, Entity, OneToMany } from 'typeorm';
+import { UserRole } from 'app-shared';
 import { BaseEntity } from '../common/entity/base.entity';
 import { RefreshToken } from '../refresh-token/refresh.token.entity';
 
@@ -33,4 +34,13 @@ export class User extends BaseEntity {
         cascade: true
     })
     refreshTokens: RefreshToken[];
+
+    @Column({
+        name: 'role',
+        type: 'enum',
+        enum: UserRole,
+        nullable: false,
+        default: UserRole.CLIENT
+    })
+    role: UserRole = UserRole.CLIENT;
 }

@@ -2,6 +2,10 @@ export enum Routes {
     baseUrl = '/',
     catalog = '/catalog',
     cart = '/cart',
-    adminDashboard = '/admin',
-    authorization = '/auth'
+    authorization = '/auth',
+    adminBaseUrl = '/admin'
+}
+
+export enum AdminRoutes {
+    userManagement = '/admin/users'
 }

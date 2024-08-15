@@ -9,6 +9,8 @@ import { JwtGuard } from './guards/jwt.guard';
 import { AccessTokenStrategy } from './strategy/jwt.access.token.strategy';
 import { RefreshTokenGuard } from './guards/refresh.token.guard';
 import { RefreshTokenStrategy } from './strategy/jwt.refresh.token.strategy';
+import { RolesGuard } from './guards/role.guard';
+import { IsActiveGuard } from './guards/is.active.guard';
 
 @Module({
     imports: [UserModule, RefreshTokenModule],
@@ -19,7 +21,9 @@ import { RefreshTokenStrategy } from './strategy/jwt.refresh.token.strategy';
         JwtGuard,
         JwtService,
         RefreshTokenStrategy,
-        RefreshTokenGuard
+        RefreshTokenGuard,
+        RolesGuard,
+        IsActiveGuard
     ],
     controllers: [AuthController]
 })

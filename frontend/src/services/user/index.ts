@@ -1,36 +1,44 @@
-import { AppResponse, AuthResponse } from 'app-shared';
-import axios from 'app-shared/node_modules/axios';
+import { AppResponse, FilterOptions, UpdatePublicUser } from 'app-shared';
 import { axiosAdapter } from '../../common/helpers/axios-adatpter';
-import { env } from '../../env';
-import { authService } from '../auth';
+
+const searchParamsToSearchString = (params?: FilterOptions) => {
+    if (!params) {
+        return '';
+    }
+    const string = Object.entries(params).reduce((search, [key, value]): string => {
+        if (typeof value === 'string') {
+            return `${search}${key}=${value}&`;
+        }
+        return Object.entries(value).reduce((nested, [nestedKey, nestedValue]) => {
+            return `${nested}${key}[${nestedKey}]=${nestedValue}&`;
+        }, search);
+    }, '');
+    return string.substring(0, string.length - 1);
+};
 
 class UserService {
-    async checkAuth(): Promise<AppResponse<AuthResponse | null>> {
-        const { accessToken } = await authService.getToken();
-        if (!accessToken) {
-            await authService.logout();
-            return {
-                data: null
-            };
-        }
-        const { data } = await axios.post<AppResponse<AuthResponse>>('/v1/auth/refresh', null, {
-            baseURL: env.urls.backend,
-            withCredentials: true
+    async getUsers(filterOptions?: FilterOptions): Promise<AppResponse<[]>> {
+        const search = searchParamsToSearchString(filterOptions);
+        const urlWithSearch = `/v1/users${search ? `?${search}` : ''}`;
+        const { data } = await axiosAdapter.doGet<AppResponse<[]>>({
+            url: urlWithSearch
         });
-        const newAccessToken = data?.data?.accessToken;
-        if (newAccessToken) {
-            await authService.setToken(newAccessToken);
-        }
 
         return data;
     }
 
-    async getUsers(): Promise<AppResponse<[]>> {
-        const { data } = await axiosAdapter.doGet<AppResponse<[]>>({
-            url: '/v1/users'
+    async deleteUsers(userIds: string[]) {
+        await axiosAdapter.doDelete({
+            url: '/v1/users',
+            queryParams: userIds
         });
+    }
 
-        return data;
+    async updateUsers(users: UpdatePublicUser[]) {
+        await axiosAdapter.doPatch({
+            url: '/v1/users',
+            payload: users
+        });
     }
 }
 

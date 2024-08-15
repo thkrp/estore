@@ -13,6 +13,7 @@ import { LoginDto } from './dto/login.dto';
 import { AuthMapper } from './auth.mapper';
 import { JwtTokenPayloadDto, RefreshTokenPayloadDto } from './dto/jwt.token.payload.dto';
 import { RefreshTokenDto } from './dto/refresh.token.dto';
+import { GeneratedTokensDto } from './dto/generated.tokens.dto';
 
 @Injectable()
 export class AuthService {
@@ -45,8 +46,7 @@ export class AuthService {
 
     #generateAccessToken(payload: JwtTokenPayloadDto) {
         const secret = this.configService.get<string>('ACCESS_TOKEN_SECRET');
-        // const expiresInMinutes = Number(this.configService.get<string>('ACCESS_TOKEN_EXPIRES_IN_MINUTES'));
-        const expiresInMinutes = 0.15;
+        const expiresInMinutes = Number(this.configService.get<string>('ACCESS_TOKEN_EXPIRES_IN_MINUTES'));
 
         return this.jwtService.sign(payload, {
             secret,
@@ -78,7 +78,7 @@ export class AuthService {
         };
     }
 
-    async #generateTokens(user: User, refreshTokenId?: string) {
+    async #generateTokens(user: User, refreshTokenId?: string): Promise<GeneratedTokensDto> {
         const payload = this.authMapper.mapUserToAccessTokenPayload(user);
         const accessToken = this.#generateAccessToken(payload);
         const refreshToken = this.#generateRefreshToken(payload);
@@ -134,7 +134,8 @@ export class AuthService {
     }
 
     async logout(payload: RefreshTokenPayloadDto) {
-        console.log(payload);
-        return undefined;
+        const tokenId = payload.token.id;
+        await this.refreshTokenService.removeToken(tokenId);
+        return null;
     }
 }

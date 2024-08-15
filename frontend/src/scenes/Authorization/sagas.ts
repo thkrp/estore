@@ -1,7 +1,7 @@
 import { all, call, put, takeEvery } from 'redux-saga/effects';
 import { Action } from 'redux-actions';
 import { Login } from 'app-shared';
-import { LoginRoutine } from './routines';
+import { LoginRoutine, LogoutRoutine } from './routines';
 import { authService } from '../../services/auth';
 import { appUserUpdateRoutine } from '../../store/app/routines';
 
@@ -19,6 +19,20 @@ function* loginHandler(action: Action<Login>) {
 function* watchLoginHandler() {
     yield takeEvery(LoginRoutine.trigger, loginHandler);
 }
+
+function* logoutHandler() {
+    try {
+        yield call([authService, authService.logout]);
+        yield put(appUserUpdateRoutine.success(null));
+    } catch (e) {
+        console.error(e);
+    }
+}
+
+function* watchLogoutHandler() {
+    yield takeEvery(LogoutRoutine.trigger, logoutHandler);
+}
+
 export default function* authSaga() {
-    yield all([watchLoginHandler()]);
+    yield all([watchLoginHandler(), watchLogoutHandler()]);
 }

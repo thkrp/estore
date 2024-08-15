@@ -24,16 +24,17 @@ class AxiosAdapter implements IAxiosAdapter {
 
         this.#adapter.interceptors.request.use(
             async config => {
+                const headers = {
+                    ...config.headers,
+                    locale: localStorageService.getLocalization()
+                };
                 const { accessToken } = await this.#authService.getToken();
                 if (accessToken) {
-                    // @ts-ignore
-                    // eslint-disable-next-line no-param-reassign
-                    config.headers = {
-                        ...config.headers,
-                        locale: localStorageService.getLocalization(),
-                        Authorization: `Bearer ${accessToken}`
-                    };
+                    headers.Authorization = `Bearer ${accessToken}`;
                 }
+                // @ts-ignore
+                // eslint-disable-next-line no-param-reassign
+                config.headers = headers;
                 return config;
             },
             error => Promise.reject(error)
@@ -47,12 +48,16 @@ class AxiosAdapter implements IAxiosAdapter {
             async (error: any) => {
                 const code = error.response?.data?.error?.code;
                 const message = error.response?.data?.error?.data?.message;
-                if (code !== ErrorCodes.UNAUTHORIZED && message !== ErrorMessages.ExpiredAccessToken) {
+                if (
+                    (code !== ErrorCodes.UNAUTHORIZED && message !== ErrorMessages.ExpiredAccessToken) ||
+                    error.config.isRetry
+                ) {
                     return Promise.reject(error);
                 }
 
                 try {
                     const originalRequest = error.config;
+                    originalRequest.isRetry = true;
                     const { data } = await axios.post<AppResponse<AuthResponse>>('/v1/auth/refresh', null, {
                         baseURL: env.urls.backend,
                         withCredentials: true

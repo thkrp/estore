@@ -1,9 +1,9 @@
 import { BadRequestException, Controller, Get, Version } from '@nestjs/common';
 import { BottomMenu, CatalogMenu, TopMenu } from 'app-shared';
+import { ApiTags } from '@nestjs/swagger';
 import { PublicRoute } from '../auth/decorators/public.route';
 import { AppResponse } from '../../response/app.response';
 import { NavigationService } from './navigation.service';
-import { ApiTags } from '@nestjs/swagger';
 
 @PublicRoute()
 @Controller('navigation')

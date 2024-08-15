@@ -1,4 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { UserRole } from 'app-shared';
 import { User } from '../../../../src/domain/user/user.entity';
 import { AuthMapper } from '../../../../src/domain/auth/auth.mapper';
 
@@ -10,7 +11,8 @@ describe('AuthMapper', () => {
         refreshTokens: [],
         id: '70e2a026-fcf2-434c-a13e-b88e8fb97096',
         email: 'test@test.com',
-        isActive: false
+        isActive: false,
+        role: UserRole.CLIENT
     };
 
     beforeEach(async () => {
@@ -28,7 +30,8 @@ describe('AuthMapper', () => {
         expect(mapper.mapUserToAccessTokenPayload(user)).toEqual({
             sub: '70e2a026-fcf2-434c-a13e-b88e8fb97096',
             email: 'test@test.com',
-            isActive: false
+            isActive: false,
+            role: 'CLIENT'
         });
     });
 });

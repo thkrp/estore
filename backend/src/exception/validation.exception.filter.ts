@@ -1,9 +1,9 @@
 import { ArgumentsHost, BadRequestException, Catch, ExceptionFilter } from '@nestjs/common';
-import { ErrMessages, ErrorCodes } from 'app-shared';
+import { ErrMessage, ErrorCodes } from 'app-shared';
 import { AppResponse } from '../response/app.response';
 
 export class ValidationException extends BadRequestException {
-    constructor(public validationErrors: ErrMessages) {
+    constructor(public validationErrors: ErrMessage[]) {
         super();
     }
 }

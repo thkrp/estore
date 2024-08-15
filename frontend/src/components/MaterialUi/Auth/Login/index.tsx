@@ -9,6 +9,14 @@ type Props = {
 const Login = ({ onLogin = () => {} }: Props) => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
+
+    const onSubmit = <T extends React.MouseEvent<HTMLButtonElement, MouseEvent> | React.FormEvent<HTMLButtonElement>>(
+        e: T,
+        data: ILogin
+    ) => {
+        e.preventDefault();
+        onLogin(data);
+    };
     return (
         <WrapperStyled>
             <Box component="form" noValidate autoComplete="off">
@@ -29,10 +37,16 @@ const Login = ({ onLogin = () => {} }: Props) => {
                             variant="outlined"
                             value={password}
                             onChange={e => setPassword(e.target.value)}
+                            type="password"
                         />
                     </Grid>
                     <Grid item>
-                        <Button variant="text" onClick={() => onLogin({ email: login, password })}>
+                        <Button
+                            variant="text"
+                            onClick={e => onSubmit(e, { email: login, password })}
+                            onSubmit={e => onSubmit(e, { email: login, password })}
+                            type="submit"
+                        >
                             Login
                         </Button>
                     </Grid>

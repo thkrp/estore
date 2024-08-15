@@ -14,7 +14,7 @@ type Props = {
 const Authorization = ({ login }: Props) => {
     const navigate = useNavigate();
     const location = useLocation();
-    const user = useUser();
+    const { user } = useUser();
     useEffect(() => {
         if (user) {
             navigate(location?.state?.previous || Routes.baseUrl);

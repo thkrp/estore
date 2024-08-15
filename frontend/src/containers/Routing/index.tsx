@@ -9,10 +9,12 @@ import { Menu } from '../../store/app/types/app.state';
 import { RootState } from '../../store/types/root.state';
 import MainLayout from '../../layouts/Main';
 import Cart from '../../scenes/Cart';
-import { Routes } from '../../common/enums/routing/routes';
+import { AdminRoutes, Routes } from '../../common/enums/routing/routes';
 import Authorization from '../../scenes/Authorization';
-import AdminDashboard from '../../scenes/AdminDashboard';
+import Admin from '../../scenes/Admin';
 import PrivateRoutes from './PrivateRoutes';
+import AdminLayout from '../../layouts/Admin';
+import UserManagement from '../../scenes/Admin/UserManagement';
 
 type Props = {
     isLoading: boolean;
@@ -91,7 +93,11 @@ const Routing: FC<Props> = ({ isLoading, menu, info, appInit, netWorkError }) =>
                 </Route>
                 <Route path={Routes.authorization} index element={<Authorization />} />
                 <Route element={<PrivateRoutes />}>
-                    <Route path={Routes.adminDashboard} index element={<AdminDashboard />} />
+                    <Route path={Routes.adminBaseUrl} element={<AdminLayout />}>
+                        <Route index element={<Admin />} />
+                        <Route path={AdminRoutes.userManagement} element={<UserManagement />} />
+                        <Route path={`${AdminRoutes.userManagement}/:id`} element={<div>user id</div>} />
+                    </Route>
                 </Route>
                 <Route path="*" element={<p>404!</p>} />
             </ReactRoutes>

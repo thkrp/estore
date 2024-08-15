@@ -1,4 +1,4 @@
-import { CreateDateColumn, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
+import { CreateDateColumn, DeleteDateColumn, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 import * as dayjs from 'dayjs';
 import dayjsPluginUTC from 'dayjs-plugin-utc';
 import { ExtendedDayjs } from '../types/extended.dayjs';
@@ -21,4 +21,10 @@ export abstract class BaseEntity {
         nullable: false
     })
     updatedAt?: dayjs.Dayjs = extendedDayjs.utc();
+
+    @DeleteDateColumn({
+        name: 'deleted_at',
+        type: 'timestamp without time zone'
+    })
+    deletedAt?: dayjs.Dayjs = extendedDayjs.utc();
 }

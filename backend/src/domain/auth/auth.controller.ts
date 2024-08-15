@@ -6,13 +6,13 @@ import { CurrentUser } from '../common/decorators/current.user';
 import { ApplicationException } from '../../exception/application.exception';
 import { ApiAppResponse } from '../../response/decorators/swagger/api.response';
 import { ApiValidationErrorResponse } from '../../response/decorators/swagger/api.validation.error.response';
-import { AuthService } from './auth.service';
 import { LoginDto } from './dto/login.dto';
 import { PublicRoute } from './decorators/public.route';
 import { RefreshTokenGuard } from './guards/refresh.token.guard';
 import { SetRefreshTokenCookieInterceptor } from './interceptors/set.refresh.token.cookie.interceptor';
 import { RefreshTokenPayloadDto } from './dto/jwt.token.payload.dto';
 import { AuthResponseDto } from './dto/auth.response.dto';
+import { AuthService } from './auth.service';
 
 @ApiTags('auth')
 @PublicRoute()
@@ -68,7 +68,7 @@ export class AuthController {
     @Version('1')
     @UseGuards(RefreshTokenGuard)
     @Post('/logout')
-    async logout(@CurrentUser() user: RefreshTokenPayloadDto): Promise<AppResponse<AuthResponseDto>> {
+    async logout(@CurrentUser() user: RefreshTokenPayloadDto): Promise<AppResponse<null>> {
         try {
             const data = await this.authService.logout(user);
             return {

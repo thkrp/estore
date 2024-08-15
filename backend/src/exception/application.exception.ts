@@ -1,6 +1,5 @@
 import { HttpException, HttpStatus } from '@nestjs/common';
-import { ErrorCodes } from 'app-shared';
-import { ErrorMessages } from 'app-shared';
+import { ErrorCodes, ErrorMessages } from 'app-shared';
 
 export class ApplicationException extends HttpException {
     private constructor(httpStatus: HttpStatus, message?: string, applicationCode?: ErrorCodes) {

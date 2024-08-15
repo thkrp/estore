@@ -6,7 +6,8 @@ export class AuthMapper {
         return {
             sub: user.id!,
             email: user.email,
-            isActive: user.isActive
+            isActive: user.isActive,
+            role: user.role
         };
     }
 }

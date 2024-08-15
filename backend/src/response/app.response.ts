@@ -1,4 +1,4 @@
-import { AppResponse as IAppResponse, AppError as IAppError, ErrorCodes, ErrMessages } from 'app-shared';
+import { AppResponse as IAppResponse, AppError as IAppError, ErrorCodes, ErrMessage } from 'app-shared';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class AppError implements IAppError {
@@ -7,7 +7,7 @@ export class AppError implements IAppError {
     @ApiProperty()
     data: {
         message: string;
-        [x: string]: string | ErrMessages;
+        [x: string]: string | ErrMessage | ErrMessage[];
     };
 }
 

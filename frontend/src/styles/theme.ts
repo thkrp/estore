@@ -18,7 +18,13 @@ export const theme = {
             grey: '#555'
         },
         grey: '#7e7e7e',
-        darkgrey: '#545b62'
+        darkgrey: '#545b62',
+        gray: {
+            100: '#ececec',
+            200: '#e3e3e3',
+            300: '#e0e0e0',
+            500: '#d3d6db'
+        }
     },
     fonts: {
         regular: 'OpenSans-Regular, sans-serif',

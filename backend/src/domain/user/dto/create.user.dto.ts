@@ -1,6 +1,6 @@
 import { IsEmail, IsString, Length, Matches } from 'class-validator';
-import { IsEqualTo } from '../../common/decorators/is.equal.to';
 import { ApiProperty } from '@nestjs/swagger';
+import { IsEqualTo } from '../../common/decorators/is.equal.to';
 
 export class CreateUserDto {
     @ApiProperty()

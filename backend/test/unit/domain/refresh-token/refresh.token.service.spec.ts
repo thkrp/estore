@@ -1,6 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { UserRole } from 'app-shared';
 import { MockType } from '../../../common/types/mock.type';
 import { User } from '../../../../src/domain/user/user.entity';
 import { repositoryMockFactory } from '../../../common/helpers/repository.helper';
@@ -15,14 +16,15 @@ describe('UserService', () => {
         refreshTokens: [],
         id: '70e2a026-fcf2-434c-a13e-b88e8fb97096',
         email: 'test@test.com',
-        isActive: false
+        isActive: false,
+        role: UserRole.CLIENT
     };
 
     const token = {
         id: 'uuid-token-id',
         token: 'tokenhash',
         expires: new Date()
-    }
+    };
 
     beforeEach(async () => {
         const module: TestingModule = await Test.createTestingModule({

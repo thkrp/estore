@@ -4,6 +4,7 @@ import { ConfigService } from '@nestjs/config';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import * as bcrypt from 'bcrypt';
+import { UserRole } from 'app-shared';
 import { AuthService } from '../../../../src/domain/auth/auth.service';
 import { AuthMapper } from '../../../../src/domain/auth/auth.mapper';
 import { RefreshTokenService } from '../../../../src/domain/refresh-token/refresh.token.service';
@@ -27,7 +28,8 @@ describe('authService', () => {
         refreshTokens: [],
         id: '70e2a026-fcf2-434c-a13e-b88e8fb97096',
         email: 'test@test.com',
-        isActive: false
+        isActive: false,
+        role: UserRole.CLIENT
     };
 
     const refreshToken: RefreshToken = {
@@ -40,6 +42,7 @@ describe('authService', () => {
         email: '',
         isActive: false,
         sub: '',
+        role: UserRole.CLIENT,
         token: {
             id: 'token-id',
             token: token,

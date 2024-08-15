@@ -1,5 +1,5 @@
 import { BadRequestException, Controller, Get, Param, Version } from '@nestjs/common';
-import { Localization, Translation } from 'app-shared';
+import { Localization } from 'app-shared';
 import { ApiTags } from '@nestjs/swagger';
 import { PublicRoute } from '../auth/decorators/public.route';
 import { AppResponse } from '../../response/app.response';

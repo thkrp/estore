@@ -4,6 +4,7 @@
     "private": true,
     "dependencies": {
         "@braintree/sanitize-url": "^6.0.4",
+        "@mui/icons-material": "^5.15.4",
         "@mui/material": "^5.15.3",
         "@mui/styled-engine-sc": "^6.0.0-alpha.11",
         "@reduxjs/toolkit": "^1.9.5",

@@ -37,4 +37,10 @@ export class RefreshTokenService {
     async getTokenById(id: string) {
         return await this.refreshTokenRepository.findOne({ where: { id } });
     }
+
+    async removeToken(id: string) {
+        return await this.refreshTokenRepository.delete({
+            id
+        });
+    }
 }

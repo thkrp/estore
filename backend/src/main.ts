@@ -10,25 +10,28 @@ import {
 } from '@nestjs/common';
 import * as cookieParser from 'cookie-parser';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { ErrMessages, isNotProduction } from 'app-shared';
+import { isNotProduction } from 'app-shared';
+import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
 import { AppModule } from './app.module';
 import { JwtGuard } from './domain/auth/guards/jwt.guard';
 import { ValidationException, ValidationFilter } from './exception/validation.exception.filter';
 import { GlobalExceptionFilter } from './exception/global.exception.filter';
+import { RolesGuard } from './domain/auth/guards/role.guard';
+import { IsActiveGuard } from './domain/auth/guards/is.active.guard';
+import { parsErrors } from './utils/parse.errors.utils';
 
 const setupGuards = (app: INestApplication) => {
     const jwtGuard = app.get(JwtGuard);
-    app.useGlobalGuards(jwtGuard);
+    const rolesGuard = app.get(RolesGuard);
+    const isActiveGuard = app.get(IsActiveGuard);
+    app.useGlobalGuards(jwtGuard, rolesGuard, isActiveGuard);
 };
 
 const setupValidation = (app: INestApplication) => {
     app.useGlobalPipes(
         new ValidationPipe({
             exceptionFactory: (errors: ValidationError[]) => {
-                const errMsg: ErrMessages = {};
-                errors.forEach(err => {
-                    errMsg[err.property] = err.constraints ? [...Object.values(err.constraints)] : [];
-                });
+                const errMsg = parsErrors(errors);
                 return new ValidationException(errMsg);
             }
         })
@@ -58,6 +61,7 @@ async function bootstrap() {
         type: VersioningType.URI
     });
     app.useGlobalFilters(new GlobalExceptionFilter(), new ValidationFilter());
+    app.useLogger(app.get(WINSTON_MODULE_NEST_PROVIDER));
     setupGuards(app);
     setupSwagger(app);
     app.use(cookieParser());
@@ -67,6 +71,7 @@ async function bootstrap() {
     });
     app.use(helmet());
     setupValidation(app);
+    app.getHttpAdapter().getInstance().disable('x-powered-by');
     await app.listen(configService.get('SERVER_PORT') || 3000);
 }
 bootstrap().catch(err => console.error(err));
